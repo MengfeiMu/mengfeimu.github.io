@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <meta charset="utf-8">
+<title>NLDAS气象数据下载 - Mengfei Mu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+
+
+
+
+
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=A-102161534-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'A-102161534-1');
+</script>
+
+
+    
+
+
+</head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                    
+                    Mengfei
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item "
+               href="/archives">Archives</a>
+            
+            <a class="navbar-item "
+               href="/tags">Tags</a>
+            
+            <a class="navbar-item "
+               href="/categories">categories</a>
+            
+            <a class="navbar-item "
+               href="https://mengfeimu.github.io/cv/">About</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/mengfeimu">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            NLDAS气象数据下载
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-03-11T13:42:22.000Z" itemprop="datePublished">Mar 11 2019</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/Data/">Data</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            11 minutes read (About 1589 words)
+        </span>
+        
+    </div>
+    
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+
+    
+
+        <!-- add table of content -->
+        
+        <div id="toc" class="toc-article">
+          <strong class="toc-title"></strong>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#NLDAS2"><span class="toc-text">NLDAS2</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#simple-subst-wizard方式下载"><span class="toc-text">simple subst wizard方式下载</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#wget-下载"><span class="toc-text">wget 下载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#python下载"><span class="toc-text">python下载</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Earthdata-Search方式下载"><span class="toc-text">Earthdata Search方式下载</span></a></li></ol>
+        </div>
+        
+
+        <h1 id="NLDAS2"><a href="#NLDAS2" class="headerlink" title="NLDAS2"></a><a href="https://ldas.gsfc.nasa.gov/nldas/NLDAS2forcing.php" target="_blank" rel="noopener">NLDAS2</a></h1><p>美国气象同化数据</p>
+<p><a href="https://disc.gsfc.nasa.gov/datasets/NLDAS_NOAH0125_H_V002/summary?keywords=NLDAS" target="_blank" rel="noopener">https://disc.gsfc.nasa.gov/datasets/NLDAS_NOAH0125_H_V002/summary?keywords=NLDAS</a></p>
+<p>时间：19790101-present，</p>
+<p>空间分辨率：\(0.125\ ^\circ \)</p>
+<p>下载之前先确保已<a href="https://urs.earthdata.nasa.gov/profile" target="_blank" rel="noopener">授权</a>。</p>
+<h1 id="simple-subst-wizard方式下载"><a href="#simple-subst-wizard方式下载" class="headerlink" title="simple subst wizard方式下载"></a>simple subst wizard方式下载</h1><p><a href="https://disc.gsfc.nasa.gov/SSW/#keywords=NLDAS_FORA0125_H" target="_blank" rel="noopener">数据查询、选择地址</a>：这一步完成后会生成多个链接，每个链接只是一个时间点的数据，比如要下载1982年1月1日的hourly数据，则有24个文件。其实只需要其中一个链接即可，其他链接可以通过修改时间信息自动生成。</p>
+<p><a href="https://disc.gsfc.nasa.gov/SSW/SSW_URL_List_Downloading_Instructions.html" target="_blank" rel="noopener">下载方法</a> 和 <a href="https://disc.gsfc.nasa.gov/data-access#mac_linux_wget" target="_blank" rel="noopener">参考链接（重要）</a></p>
+<p>username: mengfeimu</p>
+<p>password: XXX</p>
+<h2 id="wget-下载"><a href="#wget-下载" class="headerlink" title="wget 下载"></a>wget 下载</h2><p>Linux或者macOS均可以运行。需要先执行以下3步，参考链接：</p>
+<ol>
+<li><p>查看是否<a href="https://urs.earthdata.nasa.gov/profile" target="_blank" rel="noopener">授权Earthdata</a></p>
+</li>
+<li><p>设置用户名和密码：</p>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd ~ # 可以选择任意的目标文件夹</span><br><span class="line">touch .netrc</span><br><span class="line">echo "machine urs.earthdata.nasa.gov login uid_goes_here password password_goes_here" &gt; .netrc</span><br><span class="line">chmod 0600 .netrc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>同一文件夹下，创建cookies文件：</p>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch .urs_cookies</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>单个文件下载：</p>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --load-cookies ./.urs_cookies --save-cookies ./.urs_cookies --auth-no-challenge=on --keep-session-cookies --content-disposition http://hydro1.gesdisc.eosdis.nasa.gov/daac-bin/OTF/HTTP_services.cgi\?FILENAME\=%2Fdata%2FNLDAS%2FNLDAS_FORA0125_H.002%2F1982%2F001%2FNLDAS_FORA0125_H.A19820101.0100.002.grb\&amp;FORMAT\=bmV0Q0RGLw\&amp;BBOX\=38.204%2C-89.855%2C38.206%2C-89.853\&amp;LABEL\=NLDAS_FORA0125_H.A19820101.0100.002.2019072152945.pss.nc\&amp;SHORTNAME\=NLDAS_FORA0125_H\&amp;SERVICE\=SUBSET_GRIB\&amp;VERSION\=1.02\&amp;LAYERS\=Eg\&amp;DATASET_VERSION\=002</span><br></pre></td></tr></table></figure>
+<p>批量下载，需要把所有网址都存储在urls.txt中，然后执行以下命令：</p>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --load-cookies ./.urs_cookies --save-cookies ./.urs_cookies --auth-no-challenge=on --keep-session-cookies --content-disposition -i urls.txt</span><br></pre></td></tr></table></figure>
+<p>可以在命令后加上<code>&amp;</code>放在后台运行，但由于每个文件都要和http通讯，很费时间，平均下载一天的数据文件（24个文件）需要下载40s，当然，可以考虑并行下载，会快点。</p>
+<p>wget并行下载：</p>
+<p>将以下内容存储为文件<code>download_NLDAS.sh</code>:</p>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#</span>!/bin/bash</span><br><span class="line">infile="$1" # 这里的1是指执行该文件时添加的第一个参数</span><br><span class="line">while IFS='' read -r url || [[ -n "$url" ]]; do</span><br><span class="line">    wget --load-cookies ./.urs_cookies --save-cookies ./.urs_cookies --auth-no-challenge=on --keep-session-cookies --content-disposition $url &amp;&gt;/dev/null &amp; </span><br><span class="line">done &lt; "$1"</span><br><span class="line">wait </span><br><span class="line"><span class="hljs-meta">#</span> &amp;&gt;/dev/nul 命令将滚动的输出隐去，设置为silient模式</span><br><span class="line"><span class="hljs-meta">#</span> &amp;：并行运算，将所有命令并行放在后台运行</span><br></pre></td></tr></table></figure>
+<p>将所有需要下载的文件网址写入文件<code>urls.txt</code>，这里可以借用python，</p>
+<p><del>执行命令并下载：</del></p>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh ./download_NLDAS.sh urls.txt</span><br></pre></td></tr></table></figure>
+<p><del>如果需要统计运行时间，可在命令前加上<code>time</code>:</del></p>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">time sh ./download_NLDAS.sh urls.txt</span><br></pre></td></tr></table></figure>
+<p>也可参考EarthData官网给出的wget下载文件.sh。</p>
+<p>直接执行<code>download_NLDAS.sh</code>下载的缺点是当文件数太多（上百上千），往往会报错：</p>
+<blockquote>
+<p>Fork: Resource temporatily unavailable</p>
+</blockquote>
+<p>因此，需要另外写个<code>main.sh</code>来调用<code>download_NLDAS.sh</code>，解决这种问题。由于是下载hourly的数据，因此每次调用<code>download_NLDAS.sh</code>来下载24个文件即一天的数据，如此循环：</p>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#</span>!/bin/bash</span><br><span class="line"><span class="hljs-meta">#</span> main.sh</span><br><span class="line">cd ~/Downloads/nldas</span><br><span class="line">n=`cat urls.txt|wc -l`</span><br><span class="line"><span class="hljs-meta">#</span> echo $n</span><br><span class="line">for ((i=1; i&lt;=$(($n/24)); i++));do</span><br><span class="line"><span class="hljs-meta">#</span>for i in &#123;1..$(($n/24))&#125;;do</span><br><span class="line">	line1=$(($(($i*24))-23))</span><br><span class="line">	line2=$(($i*24))</span><br><span class="line">    # echo $line1</span><br><span class="line">    # echo $line2</span><br><span class="line"> 	echo "$i of $(($n/24)) ..."</span><br><span class="line">    sed -n "$&#123;line1&#125;,$&#123;line2&#125;p" ./urls.txt &gt; ./urls.temp.txt</span><br><span class="line">    sh ./download_NLDAS.sh ./urls.temp.txt</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">if [ ! -d "./netcdfs" ]; then</span><br><span class="line">    mkdir ./netcdfs</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">mv ./*.nc ./netcdfs/</span><br><span class="line"></span><br><span class="line">rm ./urls.temp.txt</span><br></pre></td></tr></table></figure>
+<p>运行<code>main.sh</code>所需要的文件有，缺一不可：</p>
+<ul>
+<li><code>main.sh</code></li>
+<li><code>Download_NLDAS.sh</code></li>
+<li><code>.netrc</code></li>
+<li><code>.urs_cookies</code></li>
+</ul>
+<h2 id="python下载"><a href="#python下载" class="headerlink" title="python下载"></a>python下载</h2><p>需要使用pydap，参考<a href="https://disc.gsfc.nasa.gov/data-access#python" target="_blank" rel="noopener">GES DISC 官方指导</a>：</p>
+<p>安装pydap:</p>
+<figure class="highlight cmake hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda <span class="hljs-keyword">install</span> -c conda-forge pydap</span><br></pre></td></tr></table></figure>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># C:\mengfeimu\Data\2019_IECM\code\download_NLDAS.py</span></span><br><span class="line"><span class="hljs-comment"># jupyter notebook粘贴这些代码并不能运行（因为有并行的部分），需要存储为.py文件，然后在jupyter中运行 </span></span><br><span class="line"><span class="hljs-comment"># %run ./download_NLDAS.py</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 并行下载</span></span><br><span class="line"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd</span><br><span class="line"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np</span><br><span class="line"><span class="hljs-keyword">import</span> datetime</span><br><span class="line"><span class="hljs-keyword">from</span> multiprocessing  <span class="hljs-keyword">import</span> Pool, cpu_count</span><br><span class="line"></span><br><span class="line">t1 = datetime.datetime.now()</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">password_NLDAS</span><span class="hljs-params">()</span>:</span></span><br><span class="line">    <span class="hljs-keyword">from</span> pydap.cas.urs <span class="hljs-keyword">import</span> setup_session</span><br><span class="line">    username = <span class="hljs-string">'mengfeimu'</span></span><br><span class="line">    password = <span class="hljs-string">'MMf1216069944'</span></span><br><span class="line">    session = setup_session(username, password, ) <span class="hljs-comment"># check_url=url</span></span><br><span class="line">    <span class="hljs-keyword">return</span> session</span><br><span class="line"></span><br><span class="line">session = password_NLDAS()</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">download_NLDAS2</span><span class="hljs-params">(param)</span>:</span></span><br><span class="line">    url = param[<span class="hljs-number">0</span>]</span><br><span class="line">    y = param[<span class="hljs-number">1</span>]</span><br><span class="line">    m = param[<span class="hljs-number">2</span>]</span><br><span class="line">    d = param[<span class="hljs-number">3</span>]</span><br><span class="line">    h = param[<span class="hljs-number">4</span>]</span><br><span class="line">    r = session.request(<span class="hljs-string">'Get'</span>,url)</span><br><span class="line">    outfile = <span class="hljs-string">'&#123;outdir&#125;/&#123;year&#125;&#123;month&#125;&#123;day&#125;&#123;hour&#125;.nc'</span>.format(outdir = outdir, \</span><br><span class="line">                year = y, month = str(m).zfill(<span class="hljs-number">2</span>), day = str(d).zfill(<span class="hljs-number">2</span>), hour = str(h).zfill(<span class="hljs-number">2</span>))</span><br><span class="line">    <span class="hljs-keyword">with</span> open(outfile, <span class="hljs-string">"wb"</span>) <span class="hljs-keyword">as</span> code:</span><br><span class="line">         code.write(r.content)</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># latitude and longitude of the power plant </span></span><br><span class="line"><span class="hljs-comment"># currently, just need to change lat and lon for another power plant</span></span><br><span class="line"><span class="hljs-comment"># change dates if study period is changed</span></span><br><span class="line">lat  = <span class="hljs-number">38.205</span></span><br><span class="line">lon  = <span class="hljs-number">-89.854</span></span><br><span class="line">lats = [lat<span class="hljs-number">-0.001</span>, lat+<span class="hljs-number">0.001</span>]</span><br><span class="line">lons = [lon<span class="hljs-number">-0.001</span>, lon + <span class="hljs-number">0.001</span>]</span><br><span class="line"></span><br><span class="line">outdir = <span class="hljs-string">'../../2019_IECM/NLDAS2/55856_1982_2012'</span></span><br><span class="line"></span><br><span class="line">dates = pd.date_range(<span class="hljs-string">'19820101000000'</span>,<span class="hljs-string">'20121231230000'</span>,freq=<span class="hljs-string">'H'</span>)</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># this url is obtained from NLDAS2 Simple Subst Wizard</span></span><br><span class="line"><span class="hljs-comment"># https://disc.gsfc.nasa.gov/datasets/NLDAS_FORA0125_H_V002/summary?keywords=NLDAS</span></span><br><span class="line">url_1 = <span class="hljs-string">"http://hydro1.gesdisc.eosdis.nasa.gov/daac-bin/OTF/HTTP_services.cgi?FILENAME=%2Fdata%2FNLDAS%2FNLDAS_FORA0125_H.002%2F&#123;year&#125;%2F&#123;doy&#125;%2FNLDAS_FORA0125_H.A&#123;year&#125;&#123;month&#125;&#123;day&#125;.&#123;hour&#125;00.002.grb&amp;FORMAT=bmV0Q0RGLw&amp;BBOX=&#123;lat1&#125;%2C&#123;lon1&#125;%2C&#123;lat2&#125;%2C&#123;lon2&#125;&amp;LABEL=NLDAS_FORA0125_H.A&#123;year&#125;&#123;month&#125;&#123;day&#125;.&#123;hour&#125;00.002.2019072152945.pss.nc&amp;SHORTNAME=NLDAS_FORA0125_H&amp;SERVICE=SUBSET_GRIB&amp;VERSION=1.02&amp;LAYERS=Eg&amp;DATASET_VERSION=002"</span></span><br><span class="line"></span><br><span class="line">urls = []</span><br><span class="line">params = []</span><br><span class="line"><span class="hljs-keyword">for</span> date <span class="hljs-keyword">in</span> dates:  </span><br><span class="line">    y = date.year</span><br><span class="line">    m = date.month</span><br><span class="line">    d = date.day</span><br><span class="line">    h = date.hour</span><br><span class="line"></span><br><span class="line">    doy = date.strftime(<span class="hljs-string">'%j'</span>)</span><br><span class="line"></span><br><span class="line">    url  = url_1.format(year = y, doy=str(doy).zfill(<span class="hljs-number">3</span>),month = str(m).zfill(<span class="hljs-number">2</span>), \</span><br><span class="line">                   day = str(d).zfill(<span class="hljs-number">2</span>), hour = str(h).zfill(<span class="hljs-number">2</span>),\</span><br><span class="line">                  lat1 = lats[<span class="hljs-number">0</span>], lat2 = lats[<span class="hljs-number">1</span>], lon1 = lons[<span class="hljs-number">0</span>], lon2 = lons[<span class="hljs-number">1</span>])</span><br><span class="line">	urls.append(url)</span><br><span class="line">    params.append([url,y,m,d,h])</span><br><span class="line"><span class="hljs-comment"># 输出urls到urls.txt:</span></span><br><span class="line"><span class="hljs-comment"># df_url = pd.DataFrame(data=&#123;'url':urls&#125;,index=dates)</span></span><br><span class="line"><span class="hljs-comment"># df_url.url.to_csv(path = '../../2019_IECM/NLDAS2/55856_1982_2012/urls.txt',\</span></span><br><span class="line">                 index = <span class="hljs-keyword">False</span>)</span><br><span class="line"><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">'__main__'</span>:</span><br><span class="line">    __spec__ = <span class="hljs-string">"ModuleSpec(name='builtins', loader=&lt;class '_frozen_importlib.BuiltinImporter'&gt;)"</span></span><br><span class="line">    cores = cpu_count()  <span class="hljs-comment"># leave one core idle cpu_count()-1</span></span><br><span class="line">    p = Pool(processes = cores, maxtasksperchild = <span class="hljs-number">4</span>)</span><br><span class="line">    </span><br><span class="line">    p.map(download_NLDAS2, params)</span><br><span class="line"></span><br><span class="line">    t2 = datetime.datetime.now()</span><br><span class="line">    print(<span class="hljs-string">"time:"</span>,format(t2-t1))</span><br></pre></td></tr></table></figure>
+<h1 id="Earthdata-Search方式下载"><a href="#Earthdata-Search方式下载" class="headerlink" title="Earthdata Search方式下载"></a>Earthdata Search方式下载</h1><p>这种方式好像只能下载整个美国的数据，不能单独下载区域数据。全美数据量太大了，不推荐这种方式下载。</p>
+<p><a href="https://wiki.earthdata.nasa.gov/display/EL/How+To+Access+Data+With+cURL+And+Wget" target="_blank" rel="noopener">准备工作</a>：</p>
+<p>执行链接中的前3步：</p>
+<ol>
+<li><p>查看是否<a href="https://urs.earthdata.nasa.gov/profile" target="_blank" rel="noopener">授权Earthdata</a></p>
+</li>
+<li><p>设置用户名和密码：</p>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd ~ # 可以选择任意的目标文件夹</span><br><span class="line">touch .netrc</span><br><span class="line">echo "machine urs.earthdata.nasa.gov login uid_goes_here password password_goes_here" .netrc</span><br><span class="line">chmod 0600 .netrc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>同一文件夹下，创建cookies文件：</p>
+<figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-selector-tag">touch</span> <span class="hljs-selector-class">.urs_cookies</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>单个文件下载：</p>
+<figure class="highlight stylus hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -O -<span class="hljs-selector-tag">b</span> ./<span class="hljs-selector-class">.urs_cookies</span> -c ./<span class="hljs-selector-class">.urs_cookies</span> -L -n https:<span class="hljs-comment">//hydro1.gesdisc.eosdis.nasa.gov/data/NLDAS/NLDAS_FORA0125_H.002/2011/003/NLDAS_FORA0125_H.A20110103.2300.002.grb</span></span><br></pre></td></tr></table></figure>
+<p>若能下载成功，说明前面的3步设置正确。</p>
+<p>批量下载：</p>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#</span><span class="hljs-bash">!/bin/sh</span></span><br><span class="line">fetch_urls() &#123;</span><br><span class="line">        while read -r line; do</span><br><span class="line">            curl -b ~/.urs_cookies -c ~/.urs_cookies -L -n -f -Og $line &amp;&amp; echo || exit_with_error "Command failed with error. Please retrieve the data manually."</span><br><span class="line">        done;</span><br><span class="line">&#125;</span><br><span class="line">fetch_urls &lt;&lt;'EDSCEOF'</span><br><span class="line"><span class="hljs-meta">#</span><span class="hljs-bash"> Insert URLS here</span></span><br><span class="line"><span class="hljs-meta">#</span><span class="hljs-bash"> url1</span></span><br><span class="line"><span class="hljs-meta">#</span><span class="hljs-bash"> url2</span></span><br><span class="line"><span class="hljs-meta">#</span><span class="hljs-bash"> url...</span></span><br><span class="line">EDSCEOF</span><br></pre></td></tr></table></figure>
+
+    
+
+
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/2019/03/14/tool/python-parallel-并行/">Python并行计算</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/2019/03/11/kindle/">Kindle</a>
+            
+        </span>
+    </div>
+    
+
+</article>
+
+
+
+
+<div class="comments">
+    <h3 class="title is-4">Comments</h3>
+    
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://mengfeimu.github.io/2019/03/11/NLDAS/';
+        this.page.identifier = '2019/03/11/NLDAS/';
+        
+        this.language = 'en';
+        
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'mengfeimu' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+
+
+
+
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2019 Mengfei Mu&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+</script>
+
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+
+    
+
+
+<script src="/js/script.js"></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+</body>
+</html>

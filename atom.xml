@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Mengfei Mu</title>
+  
+  <subtitle>Personal Site</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://mengfeimu.github.io/"/>
+  <updated>2019-06-06T09:24:11.856Z</updated>
+  <id>https://mengfeimu.github.io/</id>
+  
+  <author>
+    <name>Mengfei Mu</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Scihub可用链接</title>
+    <link href="https://mengfeimu.github.io/2019/06/07/scihub-links/"/>
+    <id>https://mengfeimu.github.io/2019/06/07/scihub-links/</id>
+    <published>2019-06-06T17:20:42.000Z</published>
+    <updated>2019-06-06T09:24:11.856Z</updated>
+    
+    <content type="html"><![CDATA[<p>有些数据库单位没有购买，无从下载，不得已从scihub上下载，但很多域名经常被封。以下是目前可用的域名（有可能需要用VPN）：</p><p><a href="https://sci-hub.se/" target="_blank" rel="noopener">https://sci-hub.se/</a></p><p><a href="https://sci-hub.tw/" target="_blank" rel="noopener">https://sci-hub.tw/</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;有些数据库单位没有购买，无从下载，不得已从scihub上下载，但很多域名经常被封。以下是目前可用的域名（有可能需要用VPN）：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://sci-hub.se/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Cygwin工具入门</title>
+    <link href="https://mengfeimu.github.io/2019/05/30/cygwin/"/>
+    <id>https://mengfeimu.github.io/2019/05/30/cygwin/</id>
+    <published>2019-05-29T17:03:30.000Z</published>
+    <updated>2019-05-29T09:14:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>cygwin工具在windows系统中提供完整的Unix环境，方便使用shell等工具。</p><h1 id="下载和安装："><a href="#下载和安装：" class="headerlink" title="下载和安装："></a>下载和安装：</h1><p><a href="https://cygwin.com/" target="_blank" rel="noopener">https://cygwin.com/</a>，仅仅安装了最基础的packages，vim等没有安装。</p><h1 id="安装需要的package"><a href="#安装需要的package" class="headerlink" title="安装需要的package"></a>安装需要的package</h1><p>重新运行cygwin的安装文件，选择相应的package。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;cygwin工具在windows系统中提供完整的Unix环境，方便使用shell等工具。&lt;/p&gt;
+&lt;h1 id=&quot;下载和安装：&quot;&gt;&lt;a href=&quot;#下载和安装：&quot; class=&quot;headerlink&quot; title=&quot;下载和安装：&quot;&gt;&lt;/a&gt;下载和安装：&lt;/h1&gt;&lt;p&gt;&lt;a
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="https://mengfeimu.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="WIN" scheme="https://mengfeimu.github.io/tags/WIN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows Time Machine 时间机器</title>
+    <link href="https://mengfeimu.github.io/2019/05/29/win-time-machine/"/>
+    <id>https://mengfeimu.github.io/2019/05/29/win-time-machine/</id>
+    <published>2019-05-29T10:50:18.000Z</published>
+    <updated>2019-05-29T09:27:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>windows系统下的系统备份和文件历史记录（只能备份库文件中的文件）功能不太好用，而又想像macOS下的Time Machine那样记录文件的历史，找到了Github上的一个项目<a href="https://github.com/laurent22/rsync-time-backup" target="_blank" rel="noopener">rsync_time_backup</a>可以运行在win（需要通过WSL 或者 cygwin）, Linux, 和macOS下。</p><ol><li><p>安装<a href="https://cygwin.com/index.html" target="_blank" rel="noopener">cygwin</a>，选择默认设置即可。从cygwin命令行窗口进入win目录时，使用<code>cd /cygdrive/XXX</code>，表示虚拟目录。</p></li><li><p>安装rsync_time_backup：<code>git clone https://github.com/laurent22/rsync-time-backup</code></p></li><li><p>运行rsync_time_backup命令（详情请参见上面的GitHub项目链接）：</p><p>第一次运行时出错，显示<code>$&#39;\r&#39;: 未找到命令</code>，这是因为windows文件系统下会给每一行结尾加上<code>\r</code>，但Unix系统下不识别，解决办法是用在cygwin命令行窗口用<code>curl</code>命令直接下载并覆盖rsync_tmbackup.sh</p><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl https://raw.githubusercontent.com/mengfeimu/rsync-time-backup/master/rsync_tmbackup.sh &gt; rsync_tmbackup.sh</span><br></pre></td></tr></table></figure></li><li><p><code>rsync: 未找到命令</code></p><p>需要重新运行cygwin_setup.exe并安装<code>rsync</code>包。</p></li><li><p>执行同步命令：<code>sh ./rsync_tmbackup.sh backup_source_dir backup_destination_dir</code></p></li><li><p>如果是第一次同步，还需要向目标文件夹下创建新文件<code>backup.marker</code>，按照提示操作即可创建。</p></li><li><p>问题：目标文件夹下各个日期文件夹下都包含有所有文件，也就是说重复占用了很多空间（虽然没有进行拷贝），并非像项目介绍中所说的使用hardlink减少了文件体积，是我理解有误吗？</p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;windows系统下的系统备份和文件历史记录（只能备份库文件中的文件）功能不太好用，而又想像macOS下的Time Machine那样记录文件的历史，找到了Github上的一个项目&lt;a href=&quot;https://github.com/laurent22/rsync-tim
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="https://mengfeimu.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="WIN" scheme="https://mengfeimu.github.io/tags/WIN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>美国电网分区 NERC Regions</title>
+    <link href="https://mengfeimu.github.io/2019/05/29/NERC-regions/"/>
+    <id>https://mengfeimu.github.io/2019/05/29/NERC-regions/</id>
+    <published>2019-05-28T17:42:22.000Z</published>
+    <updated>2019-05-28T09:39:35.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>NERC：North American Electric Reliability Corporation</p><p>共有八个大区，若干小区，如图：</p><p><img src="https://www.nerc.com/AboutNERC/keyplayers/PublishingImages/Regions24JUL18.jpg" alt="NERC Regions"></p><p>分区数据下载(ArcGIS shapefile)：</p><ol><li><a href="https://hub.arcgis.com/items/6b2af23c67f04f4cb01d88c61aaf558a" target="_blank" rel="noopener">ArcGIS官网下载链接</a> （需要注册登录）</li><li>利用上述链接中的APIs，打开ArcGIS软件并添加GIS server，复制粘贴APIs中的GeoService网址，即可（不需登录），在ArcGIS软件中的Catalog中找到相应server和NERC，拖到ArcGIS图层即可。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;NERC：North American Electric Reliability Corporation&lt;/p&gt;
+&lt;p&gt;共有八个大区，若干小区，如图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.nerc.com/AboutNERC/keyplayers/Pu
+      
+    
+    </summary>
+    
+      <category term="Data" scheme="https://mengfeimu.github.io/categories/Data/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>韩文Hwp打开软件</title>
+    <link href="https://mengfeimu.github.io/2019/05/26/hwp%E6%89%93%E5%BC%80%E8%BD%AF%E4%BB%B6/"/>
+    <id>https://mengfeimu.github.io/2019/05/26/hwp打开软件/</id>
+    <published>2019-05-25T16:57:59.000Z</published>
+    <updated>2019-05-25T14:41:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>官方在线免费打开方式（可编辑）：</p><p><a href="https://space.malangmalang.com/drive" target="_blank" rel="noopener">https://space.malangmalang.com/drive</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;官方在线免费打开方式（可编辑）：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://space.malangmalang.com/drive&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://space.malangmalang.com/driv
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="https://mengfeimu.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="WIN" scheme="https://mengfeimu.github.io/tags/WIN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用Gitignore文件来忽略不用同步的文件</title>
+    <link href="https://mengfeimu.github.io/2019/04/23/gitignore/"/>
+    <id>https://mengfeimu.github.io/2019/04/23/gitignore/</id>
+    <published>2019-04-23T11:07:00.000Z</published>
+    <updated>2019-04-23T03:33:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>使用<code>.gitignore</code>文件来忽略某些不想或没必要每次都要同步的文件，比如一些缓存文件，如pyhspf中的<code>__pycache</code>文件夹中的所有内容。</p><p>在git项目下新建一个文件<code>.gitignore</code>，然后在文件中输入想要忽略的文件名或者路径名，如：</p><figure class="highlight markdown hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">./<span class="hljs-strong">__pycache__</span></span><br><span class="line">./calibration/<span class="hljs-strong">__pycache__</span></span><br><span class="line">./core/<span class="hljs-strong">__pycache__</span></span><br><span class="line">./forecasting/<span class="hljs-strong">__pycache__</span></span><br><span class="line">./preprocessing/<span class="hljs-strong">__pycache__</span></span><br></pre></td></tr></table></figure><p>这样，所有的<code>__pycache__</code>文件夹下的所有文件都不会push到远程的git项目中。可以用更简单的方式忽略项目里所有<code>__pycache</code>文件夹，参考<a href="https://www.atlassian.com/git/tutorials/saving-changes/gitignore#git-ignore-patterns" target="_blank" rel="noopener">链接</a></p><figure class="highlight markdown hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-strong">**/__</span>pycache__</span><br></pre></td></tr></table></figure><h1 id="忽略已经push到远程的文件"><a href="#忽略已经push到远程的文件" class="headerlink" title="忽略已经push到远程的文件"></a>忽略已经push到远程的文件</h1><p>同样，建立<code>.gitignore</code>文件并加入想要忽略的文件名或路径名，然后执行：</p><figure class="highlight jboss-cli hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rm <span class="hljs-params">--cached</span> **<span class="hljs-string">/__pycache__</span></span><br></pre></td></tr></table></figure><p>所有<code>__pycache</code>文件夹都已经从git的索引中删除（本地的文件还在，远程的目前也还在）。</p><p>然后执行：</p><figure class="highlight avrasm hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="hljs-string">"add a name"</span></span><br><span class="line">git <span class="hljs-keyword">push</span> <span class="hljs-meta">#(此时，本地的文件也都还在，远程的已被删除)</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      git工具安装与使用
+    
+    </summary>
+    
+      <category term="工具" scheme="https://mengfeimu.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="git" scheme="https://mengfeimu.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Win7升级win10</title>
+    <link href="https://mengfeimu.github.io/2019/04/19/win7%E5%8D%87%E7%BA%A7win10/"/>
+    <id>https://mengfeimu.github.io/2019/04/19/win7升级win10/</id>
+    <published>2019-04-18T20:09:50.000Z</published>
+    <updated>2019-04-18T13:49:19.398Z</updated>
+    
+    <content type="html"><![CDATA[<p>办公室的电脑是win7系统，本想着不折腾了，就这样用吧，没想到不能安装已经下载好的VISIO2019。不想再重新装VISIO2016，怕因为版本不一无法打开以前的文件。于是考虑升级win10。</p><p>搜索之后发现，win7升级win10后所有的软件和文件都保存，并没有删除。方法如下：</p><ol><li>微软官网下载安装包，<a href="https://www.microsoft.com/zh-cn/software-download/windows10ISO" target="_blank" rel="noopener">win10下载链接</a>；</li><li>双击下载的安装包，按照提示安装即可。</li><li>果然，几乎所有程序都可以直接打开使用。（需要重新替换ArcGIS安装文件夹中的Afcore.dll文件。）</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;办公室的电脑是win7系统，本想着不折腾了，就这样用吧，没想到不能安装已经下载好的VISIO2019。不想再重新装VISIO2016，怕因为版本不一无法打开以前的文件。于是考虑升级win10。&lt;/p&gt;
+&lt;p&gt;搜索之后发现，win7升级win10后所有的软件和文件都保存，并没
+      
+    
+    </summary>
+    
+    
+      <category term="WIN" scheme="https://mengfeimu.github.io/tags/WIN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>罗技MK850键盘鼠标套装</title>
+    <link href="https://mengfeimu.github.io/2019/04/16/%E7%BD%97%E6%8A%80MK850%E9%94%AE%E7%9B%98%E9%BC%A0%E6%A0%87%E5%A5%97%E8%A3%85/"/>
+    <id>https://mengfeimu.github.io/2019/04/16/罗技MK850键盘鼠标套装/</id>
+    <published>2019-04-15T18:52:24.000Z</published>
+    <updated>2019-04-15T10:59:26.591Z</updated>
+    
+    <content type="html"><![CDATA[<p>多台电脑放在拥挤的办公桌，各种键盘实在不便，于是买了罗技MK850键鼠套装，京东549元，另外买了两年以换代修的保险29元。</p><p>MK850可以蓝牙连接，也可以通过在电脑上插迷你的USB（罗技称之为unifying技术）来连接，一共可以连接三个设备。</p><p>MacBook Pro和笔记本都顺利通过蓝牙连接了（按白色设备切换键3秒，并在笔记本上打开蓝牙连接），并下载了Logitech Option软件进行设置。</p><p>台式机按照操作（按白色设备切换键3秒；Fn+P连按3秒）却无法连接键盘（鼠标可以正常连接）。试了好几次，都不可以。于是先下载Options软件，安装后打开，点击左下角的“添加设备”，按照提示，即可连接上键盘。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;多台电脑放在拥挤的办公桌，各种键盘实在不便，于是买了罗技MK850键鼠套装，京东549元，另外买了两年以换代修的保险29元。&lt;/p&gt;
+&lt;p&gt;MK850可以蓝牙连接，也可以通过在电脑上插迷你的USB（罗技称之为unifying技术）来连接，一共可以连接三个设备。&lt;/p&gt;
+&lt;p
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Anaconda Rollback and Revert</title>
+    <link href="https://mengfeimu.github.io/2019/04/11/anaconda-rollback/"/>
+    <id>https://mengfeimu.github.io/2019/04/11/anaconda-rollback/</id>
+    <published>2019-04-11T15:52:47.000Z</published>
+    <updated>2019-04-11T07:59:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>有时装了某个package后想删除，但没法同时删除安装时附带的其他package，因此需要回滚到某个状态，好在anaconda在每次增删packages时会自动记录版本，查看所有历史版本：</p><figure class="highlight applescript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda <span class="hljs-built_in">list</span> <span class="hljs-comment">--revision</span></span><br></pre></td></tr></table></figure><p>找到想回滚的某个版本号，如想回滚到第6次更改，则执行：</p><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda <span class="hljs-keyword">install</span> <span class="hljs-comment">--revision 6</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;有时装了某个package后想删除，但没法同时删除安装时附带的其他package，因此需要回滚到某个状态，好在anaconda在每次增删packages时会自动记录版本，查看所有历史版本：&lt;/p&gt;
+&lt;figure class=&quot;highlight applescript h
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="https://mengfeimu.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Anaconda" scheme="https://mengfeimu.github.io/tags/Anaconda/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Anaconda prompt窗口直接运行.py文件</title>
+    <link href="https://mengfeimu.github.io/2019/04/11/anaconda%E6%89%A7%E8%A1%8Cpython%E8%84%9A%E6%9C%AC/"/>
+    <id>https://mengfeimu.github.io/2019/04/11/anaconda执行python脚本/</id>
+    <published>2019-04-11T15:52:47.000Z</published>
+    <updated>2019-05-28T01:34:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>打开anaconda prompt</li><li>进入相应的环境，<code>conda activate env-name</code>，并切换到目标文件所在的目录<code>cd dir_name</code></li><li>执行<code>.py</code>文件：<code>python test.py</code></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;打开anaconda prompt&lt;/li&gt;
+&lt;li&gt;进入相应的环境，&lt;code&gt;conda activate env-name&lt;/code&gt;，并切换到目标文件所在的目录&lt;code&gt;cd dir_name&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;执行&lt;code&gt;.py&lt;
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="https://mengfeimu.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Anaconda" scheme="https://mengfeimu.github.io/tags/Anaconda/"/>
+    
+      <category term="python" scheme="https://mengfeimu.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Pandas读取dbf文件</title>
+    <link href="https://mengfeimu.github.io/2019/04/11/pandas%E8%AF%BB%E5%8F%96dbf%E6%96%87%E4%BB%B6/"/>
+    <id>https://mengfeimu.github.io/2019/04/11/pandas读取dbf文件/</id>
+    <published>2019-04-11T15:13:51.000Z</published>
+    <updated>2019-04-11T13:06:38.631Z</updated>
+    
+    <content type="html"><![CDATA[<p>pandas不能直接读取dbf文件，因此需要将其转化为csv或者用simpledbf包来读取并转化成pandas支持的dataframe格式。</p><ol><li><p>转化为csv</p><p>macOS (或Linux)系统下安装<code>csvkit</code>: </p><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install csvkit</span><br></pre></td></tr></table></figure><p>转化：</p><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">in2csv test.dbf &gt; test.csv</span><br></pre></td></tr></table></figure><p>（<code>in2csv</code>不会自动补全，不要怀疑没有安装成功<code>csvkit</code>）</p></li><li><p>用simpledbf读取</p><p>未完待续….</p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;pandas不能直接读取dbf文件，因此需要将其转化为csv或者用simpledbf包来读取并转化成pandas支持的dataframe格式。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;转化为csv&lt;/p&gt;
+&lt;p&gt;macOS (或Linux)系统下安装&lt;code&gt;csvkit&lt;/co
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="https://mengfeimu.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="python" scheme="https://mengfeimu.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ArcGIS安装和设置</title>
+    <link href="https://mengfeimu.github.io/2019/04/10/arcgis%E5%AE%89%E8%A3%85%E5%92%8C%E8%AE%BE%E7%BD%AE/"/>
+    <id>https://mengfeimu.github.io/2019/04/10/arcgis安装和设置/</id>
+    <published>2019-04-09T16:16:36.000Z</published>
+    <updated>2019-04-09T08:37:24.785Z</updated>
+    
+    <content type="html"><![CDATA[<p>ArcGIS高版本中保存的.mxd项目文件无法在低版本中打开，ArcGIS 10.5.1保存，安装10.2后报错无法打开，无奈只好重装10.5，结果安装破解后无法启动license。查找原因，原来是ArcGIS 10.2未卸载干净，按照网上方法清理所有ArcGIS和ESRI文件夹和注册表中包含ESRI和ArcGIS的信息（打开regedit.exe）。</p><h1 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h1><p>下载10.6版本（保存在硬盘和百度云中ArcGIS_Desktop_106_161544-DanCrack.iso）并重新安装：</p><ol><li>安装License Manager，并停止license服务，但不关闭窗口，稍后还得重新启动；</li><li>安装ArcGIS Desktop 10.6，点击Finish之后自动打开ArcGIS Administrator Wizard，保持打开状态不动；</li><li>破解（各个版本的ArcGIS破解方法基本不变）：将crack文件解压，将得到两个文件夹，将其中的ARCGIS.exe和service.txt复制并覆盖到安装路径<code>C:\Program Files (x86)\ArcGIS\License10.6\bin</code>，将AfCore.dll复制并覆盖到路径<code>C:\Program Files (x86)\ArcGIS\Desktop10.6\bin</code>中；</li><li>重新启动license服务，reload licenses;</li><li>在ArcGIS Administrator Wizard中更改第二个选项<code>Define a license manager now</code>为<code>localhost</code>，确定；</li><li>安装完毕，打开ArcMap 10.6确认。</li></ol><h1 id="保存相对路径"><a href="#保存相对路径" class="headerlink" title="保存相对路径"></a>保存相对路径</h1><p>换一台电脑重新打开项目文件.mxd时，出现红色感叹号，原因是相关数据文件的路径不对，需要一一点击设置新的文件路径。为避免以后麻烦，在安装完成ArcGIS后即设置成保存相对路径：</p><p><code>File -&gt; Map Document Properties -&gt; pathnames: store relative pathnames to data sources</code></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;ArcGIS高版本中保存的.mxd项目文件无法在低版本中打开，ArcGIS 10.5.1保存，安装10.2后报错无法打开，无奈只好重装10.5，结果安装破解后无法启动license。查找原因，原来是ArcGIS 10.2未卸载干净，按照网上方法清理所有ArcGIS和ESRI
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="https://mengfeimu.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>翻墙VPN</title>
+    <link href="https://mengfeimu.github.io/2019/04/05/%E7%BF%BB%E5%A2%99VPN/"/>
+    <id>https://mengfeimu.github.io/2019/04/05/翻墙VPN/</id>
+    <published>2019-04-05T13:47:42.000Z</published>
+    <updated>2019-04-05T06:26:06.497Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://portal.shadowsocks.ch" target="_blank" rel="noopener">Shadowsocks</a></p><p>大约100人民币/年</p><p>注册邮箱：<a href="mailto:xxxx@qq.com" target="_blank" rel="noopener">xxxx@qq.com</a></p><p>登录后选择有效产品/服务即可看到可用的服务器IP，速度、剩余流量等；每个月60G；</p><p><strong>如何连接：</strong></p><p>技术支持 -&gt; 帮助中心 -&gt; 查找对应的系统（IOS、macOS、win），按照教程进行连接。</p><ul><li>win: 下载gut-config.json文件并与shadowsocks.exe放在同一文件夹（OneDrive已同步）下，双击.exe运行即可。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://portal.shadowsocks.ch&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Shadowsocks&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;大约100人民币/年&lt;/p&gt;
+&lt;p&gt;注册邮箱：&lt;a href=&quot;mailto:xxxx
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="https://mengfeimu.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>macOS连接windows服务器目录</title>
+    <link href="https://mengfeimu.github.io/2019/03/25/macOS%E8%BF%9E%E6%8E%A5windows%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%AE%E5%BD%95/"/>
+    <id>https://mengfeimu.github.io/2019/03/25/macOS连接windows服务器目录/</id>
+    <published>2019-03-25T14:26:07.000Z</published>
+    <updated>2019-03-25T19:30:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>macOS connect to network windows folder</p><p>在Windows上，只需打开文件管理器，输入文件夹地址如：<code>\\swsatlas\CentersGIS\CWS\WaterSupply</code>然后回车即可。</p><p>在macOS上：<code>打开Finder -&gt; Go -&gt; Connect to Server -&gt; smb://swsatlas</code>，然后按提示输入用户名密码，操作即可。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;macOS connect to network windows folder&lt;/p&gt;
+&lt;p&gt;在Windows上，只需打开文件管理器，输入文件夹地址如：&lt;code&gt;\\swsatlas\CentersGIS\CWS\WaterSupply&lt;/code&gt;然后回车即可。&lt;/p&gt;
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="https://mengfeimu.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="macOS" scheme="https://mengfeimu.github.io/tags/macOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>提取流域边界、河流等信息</title>
+    <link href="https://mengfeimu.github.io/2019/03/22/tool/python-watershed-boundary/"/>
+    <id>https://mengfeimu.github.io/2019/03/22/tool/python-watershed-boundary/</id>
+    <published>2019-03-22T13:42:22.000Z</published>
+    <updated>2019-04-12T07:51:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>以美国为例。</p><p>主要用到的数据是<a href="https://www.usgs.gov/core-science-systems/ngp/national-hydrography/access-national-hydrography-products" target="_blank" rel="noopener">NHD (National Hydrography Dataset)、WBD (Watershed Boundary Dataset)</a>数据。</p><h1 id="查找某一地点所属流域"><a href="#查找某一地点所属流域" class="headerlink" title="查找某一地点所属流域"></a>查找某一地点所属流域</h1><p>在 <a href="https://viewer.nationalmap.gov/basic/" target="_blank" rel="noopener">The National Map Download</a>查找并下载相应的WBD数据，如<code>./San_juan</code>中的数据，其中的WBDHU8.shp下文要用到。</p><h1 id="提取河流等信息"><a href="#提取河流等信息" class="headerlink" title="提取河流等信息"></a>提取河流等信息</h1><p>下载的WBD和NHD数据河流等级很低，所以需要进行处理，比较麻烦。是否有现成的包含河流分级的数据呢？在<code>GISdata\usa\hydro</code>文件夹下的<code>stream_level.lyr</code>中有美国的河流分级数据，加载到ArcGIS中，根据想要的分级数，选择即可。stream_level越大则代表支流，越小则代表干流。直接按条件筛选，得到的结果不完美，需要手动删除某些多余的线，可结合wiki中的流域图进行编辑筛选。</p><blockquote><p>总感觉不应该这么麻烦才是，一定有更简便的方法我还不知道。</p></blockquote><h2 id="某些流域的问题"><a href="#某些流域的问题" class="headerlink" title="某些流域的问题"></a>某些流域的问题</h2><p>在kaskaskia流域，如上的<code>stream_level.lyr</code>中，选择level 3显示的河流信息较少，选择level 4显示的支流太多。没法直接使用<code>stream_level.lyr</code>来生成想要的河网信息。采用<a href="https://hydrosheds.org/" target="_blank" rel="noopener">hydrosheds.org</a>提供的<code>na_riv_15s</code>手动提取想要的河网信息。</p><blockquote><p>尝试用hydrosheds.org提供的river network （需转换成raster格式）和 flow accumulation进行河网分级，但效果很差。hydrosheds.org计划以后将提供河网分级数据，但目前还没有，参考<a href="https://hydrosheds.cr.usgs.gov/hydro.php" target="_blank" rel="noopener">https://hydrosheds.cr.usgs.gov/hydro.php</a>。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      python编程相关命令记录
+    
+    </summary>
+    
+      <category term="工具" scheme="https://mengfeimu.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="python" scheme="https://mengfeimu.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python读取.shp文件</title>
+    <link href="https://mengfeimu.github.io/2019/03/22/tool/python-shapefile/"/>
+    <id>https://mengfeimu.github.io/2019/03/22/tool/python-shapefile/</id>
+    <published>2019-03-22T13:42:22.000Z</published>
+    <updated>2019-04-11T07:03:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>有时需要用python读取<code>.shp</code>或<code>.dbf</code>文件来获取信息，比用ArcGIS方便。</p><p>所用到的包<code>shapefile</code></p><h1 id="读取shapefile"><a href="#读取shapefile" class="headerlink" title="读取shapefile"></a>读取shapefile</h1><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># 例子：读取shpefile中的HUC8代码</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">import</span> shapefile</span><br><span class="line"><span class="hljs-comment"># conda install pyshp if you can't import shapefile</span></span><br><span class="line">infile = <span class="hljs-string">'../../ArcGis/US_shape/watershed/San_Juan/WBDHU8.shp'</span></span><br><span class="line">sf = shapefile.Reader(infile)</span><br><span class="line"></span><br><span class="line">HUC8s = []</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">for</span> record <span class="hljs-keyword">in</span> sf.records():</span><br><span class="line">    HUC8s.append(record[sf.fields.index([<span class="hljs-string">'HUC8'</span>, <span class="hljs-string">'C'</span>, <span class="hljs-number">8</span>, <span class="hljs-number">0</span>])<span class="hljs-number">-1</span>])</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      python编程相关命令记录
+    
+    </summary>
+    
+      <category term="工具" scheme="https://mengfeimu.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="python" scheme="https://mengfeimu.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Pickle存储变量到文件</title>
+    <link href="https://mengfeimu.github.io/2019/03/21/tool/python-pickle/"/>
+    <id>https://mengfeimu.github.io/2019/03/21/tool/python-pickle/</id>
+    <published>2019-03-21T13:42:22.000Z</published>
+    <updated>2019-03-21T17:20:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>利用<code>pickle</code>包来将变量存储到一个单独的文件中，方便日后读取和处理，就不用每次都读取原始文件了。</p><h1 id="存储"><a href="#存储" class="headerlink" title="存储"></a>存储</h1><p><code>pickle.dump()</code></p><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># write hourly data to a file, read from original files costs long time</span></span><br><span class="line">tempfile = indir + <span class="hljs-string">'/tair_rh_1982_2012.dump'</span></span><br><span class="line"><span class="hljs-keyword">with</span> open(tempfile, <span class="hljs-string">"wb"</span>) <span class="hljs-keyword">as</span> temp:</span><br><span class="line">    pickle.dump([tair, rh], temp)</span><br></pre></td></tr></table></figure><h1 id="读取"><a href="#读取" class="headerlink" title="读取"></a>读取</h1><p><code>pickle.load()</code></p><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># read hourly data from .dump files</span></span><br><span class="line">tempfile = indir + <span class="hljs-string">'/tair_rh_1982_2012.dump'</span></span><br><span class="line"><span class="hljs-keyword">with</span> open(tempfile, <span class="hljs-string">'rb'</span>) <span class="hljs-keyword">as</span> temp:</span><br><span class="line">    tempdata = pickle.load(temp)</span><br><span class="line">    tair, rh = tempdata[<span class="hljs-number">0</span>], tempdata[<span class="hljs-number">1</span>]</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      python编程相关命令记录
+    
+    </summary>
+    
+      <category term="工具" scheme="https://mengfeimu.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="python" scheme="https://mengfeimu.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>增量备份数据Backup</title>
+    <link href="https://mengfeimu.github.io/2019/03/15/%E5%A2%9E%E9%87%8F%E5%A4%87%E4%BB%BD/"/>
+    <id>https://mengfeimu.github.io/2019/03/15/增量备份/</id>
+    <published>2019-03-15T10:50:18.000Z</published>
+    <updated>2019-03-15T16:51:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>经历了上次移动硬盘坏掉的事，虽然科研的数据都在电脑上还有备份，但从此不敢再对数据备份掉以轻心。但若每次都全部重新备份，费时费力，因此考虑增量备份，尤其是对文件内容进行修改后依然能进行正常备份新内容到新目录或移动硬盘。需要的功能有：</p><ul><li>备份全部文件、文件夹到指定的备份</li><li>某一文件内容经过修改后，可以在备份里更新（传统的复制粘贴要么提示完全替换同名文件、要么就放弃复制）</li><li>备份里已有的文件、文件夹不用再重复复制</li><li>源目录里已删除的文件、文件夹，在备份里也删除</li><li>最好可以定时自动备份</li><li>不是备份系统数据，而是自己的文件夹数据，备份系统请用macOS的Time Machine备份。</li></ul><h1 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h1><p>测试系统为<code>WIN10</code>。所用工具为windows自带的命令行工具<code>robocopy</code>。</p><h2 id="完全镜像备份"><a href="#完全镜像备份" class="headerlink" title="完全镜像备份"></a>完全镜像备份</h2><p>在windows中，打开命令行提示符工具(cmd)，命令很简单，只需要一行：</p><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">robocopy dir1 dir2 /R:3 /W:60 /MIR /LOG:copyLog.txt</span><br></pre></td></tr></table></figure><p><code>dir1</code>: 源目录</p><p><code>dir2</code>: 新的备份目录</p><p><code>/MIR</code>: 镜像备份文件，即得到一个完全一模一样的备份，与<code>/E /PURGE</code>作用一样</p><p><code>/LOG</code>: 把备份的log信息存储到一个文件里，可以查看具体进行了哪些操作</p><p>以后对<code>dir1</code>进行的操作，比如新增文件、文件夹，修改的某个文件，删除了某个文件，都同样执行以上命令，就可以完全镜像备份为一模一样的新目录。</p><p>将以上命令存储到<code>task.bat文件中</code>，双击即可运行进行备份。若要利用windows计划任务进行定时备份，则：</p><ul><li>按<code>win</code>键搜索：<code>task scheduler</code>，双击打开</li><li><code>create task</code>，在弹出窗口中设置其属性。</li></ul><h2 id="备份新增内容但是不删除"><a href="#备份新增内容但是不删除" class="headerlink" title="备份新增内容但是不删除"></a>备份新增内容但是不删除</h2><p>如果有些文件夹不想留在<code>dir1</code>里，但是还是想留个备份在<code>dir2</code>，那么就不要执行<code>/MIR</code>操作，相反，改用<code>/E</code>即可：</p><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">robocopy dir1 dir2 /R:3 /W:60 /E /LOG:copyLog.txt</span><br></pre></td></tr></table></figure><blockquote><p>关于<code>robocopy</code>的更多操作，可以</p><ul><li>参考自带的文档：在命令行提示符(cmd)中输入<code>help robocopy</code>，</li><li>或者参考<a href="https://blog.51cto.com/larryhung/1329100" target="_blank" rel="noopener">https://blog.51cto.com/larryhung/1329100</a></li></ul></blockquote><blockquote><p>看到有人推荐免费的开源软件<a href="https://freefilesync.org/" target="_blank" rel="noopener">FreeFileSync</a>，没试过。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;经历了上次移动硬盘坏掉的事，虽然科研的数据都在电脑上还有备份，但从此不敢再对数据备份掉以轻心。但若每次都全部重新备份，费时费力，因此考虑增量备份，尤其是对文件内容进行修改后依然能进行正常备份新内容到新目录或移动硬盘。需要的功能有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;备份全部文件、文
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="https://mengfeimu.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="WIN" scheme="https://mengfeimu.github.io/tags/WIN/"/>
+    
+      <category term="macOS" scheme="https://mengfeimu.github.io/tags/macOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python Netcdf文件读写</title>
+    <link href="https://mengfeimu.github.io/2019/03/15/tool/python-netcdf/"/>
+    <id>https://mengfeimu.github.io/2019/03/15/tool/python-netcdf/</id>
+    <published>2019-03-14T17:03:30.000Z</published>
+    <updated>2019-03-15T02:04:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="安装netcdf4"><a href="#安装netcdf4" class="headerlink" title="安装netcdf4"></a>安装netcdf4</h1><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install -c anaconda netcdf4</span><br></pre></td></tr></table></figure><p>这样安装完后执行<code>import netCDF4</code>会报错：</p><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">---------------------------------------------------------------------------</span></span><br><span class="line">ImportError                               Traceback (most recent <span class="hljs-keyword">call</span> <span class="hljs-keyword">last</span>)</span><br><span class="line">&lt;ipython-<span class="hljs-keyword">input</span><span class="hljs-number">-3</span><span class="hljs-number">-9588</span>a3d4fb24&gt; <span class="hljs-keyword">in</span> &lt;<span class="hljs-keyword">module</span>&gt;()</span><br><span class="line"><span class="hljs-comment">----&gt; 1 import netCDF4</span></span><br><span class="line"></span><br><span class="line">C:\ProgramData\Miniconda3\lib\site-packages\netCDF4\__init__.py <span class="hljs-keyword">in</span> &lt;<span class="hljs-keyword">module</span>&gt;()</span><br><span class="line">      <span class="hljs-number">1</span> # init <span class="hljs-keyword">for</span> netCDF4. <span class="hljs-keyword">package</span></span><br><span class="line">      <span class="hljs-number">2</span> # Docstring comes <span class="hljs-keyword">from</span> extension <span class="hljs-keyword">module</span> _netCDF4.</span><br><span class="line"><span class="hljs-comment">----&gt; 3 from ._netCDF4 import *</span></span><br><span class="line">      <span class="hljs-number">4</span> # Need explicit imports <span class="hljs-keyword">for</span> <span class="hljs-keyword">names</span> <span class="hljs-keyword">beginning</span> <span class="hljs-keyword">with</span> underscores</span><br><span class="line">      <span class="hljs-number">5</span> <span class="hljs-keyword">from</span> ._netCDF4 <span class="hljs-keyword">import</span> __doc__, __pdoc__</span><br><span class="line"></span><br><span class="line">ImportError: DLL <span class="hljs-keyword">load</span> <span class="hljs-keyword">failed</span>: The specified <span class="hljs-keyword">module</span> could <span class="hljs-keyword">not</span> be found.</span><br></pre></td></tr></table></figure><p>改用<code>pip install netcdf4</code>来安装，即可。</p><h1 id="nc文件读取"><a href="#nc文件读取" class="headerlink" title="nc文件读取"></a>nc文件读取</h1><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> netCDF4 <span class="hljs-keyword">as</span> nc</span><br><span class="line">infile = <span class="hljs-string">'filename.nc'</span></span><br><span class="line">temp = nc.Dataset(infile)</span><br><span class="line">temp.variables[<span class="hljs-string">'TMP2m_110_HTGL'</span>][:]</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      python netcdf
+    
+    </summary>
+    
+      <category term="工具" scheme="https://mengfeimu.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="python" scheme="https://mengfeimu.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Matplotlib画图时的科学计数</title>
+    <link href="https://mengfeimu.github.io/2019/03/15/tool/matplotlib-%E7%A7%91%E5%AD%A6%E8%AE%A1%E6%95%B0/"/>
+    <id>https://mengfeimu.github.io/2019/03/15/tool/matplotlib-科学计数/</id>
+    <published>2019-03-14T17:03:30.000Z</published>
+    <updated>2019-05-23T01:58:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>matplotlib画图时，如果y轴数值太大（&lt;1e6）或太小，会导致y轴的数值标识太长，影响美观，应该用科学计数来避免：</p><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">from</span> matplotlib <span class="hljs-keyword">import</span> pyplot <span class="hljs-keyword">as</span> plt</span><br><span class="line">plt.gca().yaxis.get_major_formatter().set_powerlimits((n,m))</span><br></pre></td></tr></table></figure><p>这里的<code>set_powerlimits((n,m))</code>函数中的<code>n</code>和<code>m</code>是两个重要的参数，表示当<code>y &lt; 1e-n</code>或者<code>y &gt; 1em</code>时，使用科学计数。</p>]]></content>
+    
+    <summary type="html">
+    
+      python matplotlib
+    
+    </summary>
+    
+      <category term="工具" scheme="https://mengfeimu.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="python" scheme="https://mengfeimu.github.io/tags/python/"/>
+    
+      <category term="matplotlib" scheme="https://mengfeimu.github.io/tags/matplotlib/"/>
+    
+  </entry>
+  
+</feed>

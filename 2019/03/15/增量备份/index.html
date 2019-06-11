@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <meta charset="utf-8">
+<title>增量备份数据Backup - Mengfei Mu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+
+
+
+
+
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=A-102161534-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'A-102161534-1');
+</script>
+
+
+    
+
+
+</head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                    
+                    Mengfei
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item "
+               href="/archives">Archives</a>
+            
+            <a class="navbar-item "
+               href="/tags">Tags</a>
+            
+            <a class="navbar-item "
+               href="/categories">categories</a>
+            
+            <a class="navbar-item "
+               href="https://mengfeimu.github.io/cv/">About</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/mengfeimu">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            增量备份数据Backup
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-03-15T10:50:18.000Z" itemprop="datePublished">Mar 15 2019</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/工具/">工具</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            4 minutes read (About 671 words)
+        </span>
+        
+    </div>
+    
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+
+    
+
+        <!-- add table of content -->
+        
+        <div id="toc" class="toc-article">
+          <strong class="toc-title"></strong>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#windows"><span class="toc-text">windows</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#完全镜像备份"><span class="toc-text">完全镜像备份</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#备份新增内容但是不删除"><span class="toc-text">备份新增内容但是不删除</span></a></li></ol></li></ol>
+        </div>
+        
+
+        <p>经历了上次移动硬盘坏掉的事，虽然科研的数据都在电脑上还有备份，但从此不敢再对数据备份掉以轻心。但若每次都全部重新备份，费时费力，因此考虑增量备份，尤其是对文件内容进行修改后依然能进行正常备份新内容到新目录或移动硬盘。需要的功能有：</p>
+<ul>
+<li>备份全部文件、文件夹到指定的备份</li>
+<li>某一文件内容经过修改后，可以在备份里更新（传统的复制粘贴要么提示完全替换同名文件、要么就放弃复制）</li>
+<li>备份里已有的文件、文件夹不用再重复复制</li>
+<li>源目录里已删除的文件、文件夹，在备份里也删除</li>
+<li>最好可以定时自动备份</li>
+<li>不是备份系统数据，而是自己的文件夹数据，备份系统请用macOS的Time Machine备份。</li>
+</ul>
+<h1 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h1><p>测试系统为<code>WIN10</code>。所用工具为windows自带的命令行工具<code>robocopy</code>。</p>
+<h2 id="完全镜像备份"><a href="#完全镜像备份" class="headerlink" title="完全镜像备份"></a>完全镜像备份</h2><p>在windows中，打开命令行提示符工具(cmd)，命令很简单，只需要一行：</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">robocopy dir1 dir2 /R:3 /W:60 /MIR /LOG:copyLog.txt</span><br></pre></td></tr></table></figure>
+<p><code>dir1</code>: 源目录</p>
+<p><code>dir2</code>: 新的备份目录</p>
+<p><code>/MIR</code>: 镜像备份文件，即得到一个完全一模一样的备份，与<code>/E /PURGE</code>作用一样</p>
+<p><code>/LOG</code>: 把备份的log信息存储到一个文件里，可以查看具体进行了哪些操作</p>
+<p>以后对<code>dir1</code>进行的操作，比如新增文件、文件夹，修改的某个文件，删除了某个文件，都同样执行以上命令，就可以完全镜像备份为一模一样的新目录。</p>
+<p>将以上命令存储到<code>task.bat文件中</code>，双击即可运行进行备份。若要利用windows计划任务进行定时备份，则：</p>
+<ul>
+<li>按<code>win</code>键搜索：<code>task scheduler</code>，双击打开</li>
+<li><code>create task</code>，在弹出窗口中设置其属性。</li>
+</ul>
+<h2 id="备份新增内容但是不删除"><a href="#备份新增内容但是不删除" class="headerlink" title="备份新增内容但是不删除"></a>备份新增内容但是不删除</h2><p>如果有些文件夹不想留在<code>dir1</code>里，但是还是想留个备份在<code>dir2</code>，那么就不要执行<code>/MIR</code>操作，相反，改用<code>/E</code>即可：</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">robocopy dir1 dir2 /R:3 /W:60 /E /LOG:copyLog.txt</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>关于<code>robocopy</code>的更多操作，可以</p>
+<ul>
+<li>参考自带的文档：在命令行提示符(cmd)中输入<code>help robocopy</code>，</li>
+<li>或者参考<a href="https://blog.51cto.com/larryhung/1329100" target="_blank" rel="noopener">https://blog.51cto.com/larryhung/1329100</a></li>
+</ul>
+</blockquote>
+<blockquote>
+<p>看到有人推荐免费的开源软件<a href="https://freefilesync.org/" target="_blank" rel="noopener">FreeFileSync</a>，没试过。</p>
+</blockquote>
+
+    
+
+
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/WIN/">#WIN</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/macOS/">#macOS</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/2019/03/21/tool/python-pickle/">Pickle存储变量到文件</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/2019/03/15/tool/python-netcdf/">Python Netcdf文件读写</a>
+            
+        </span>
+    </div>
+    
+
+</article>
+
+
+
+
+<div class="comments">
+    <h3 class="title is-4">Comments</h3>
+    
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://mengfeimu.github.io/2019/03/15/增量备份/';
+        this.page.identifier = '2019/03/15/增量备份/';
+        
+        this.language = 'en';
+        
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'mengfeimu' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+
+
+
+
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2019 Mengfei Mu&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+</script>
+
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+
+    
+
+
+<script src="/js/script.js"></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+</body>
+</html>
