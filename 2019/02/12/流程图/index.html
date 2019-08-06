@@ -130,7 +130,7 @@
         <span class="column is-narrow">
             
             
-            a minute read (About 173 words)
+            4 minutes read (About 657 words)
         </span>
         
     </div>
@@ -143,22 +143,44 @@
         
         <div id="toc" class="toc-article">
           <strong class="toc-title"></strong>
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#processon-com"><span class="toc-text">processon.com</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#VISIO-by-Microsoft"><span class="toc-text">VISIO by Microsoft</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#VISIO无法激活的问题"><span class="toc-text">VISIO无法激活的问题</span></a></li></ol></li></ol>
         </div>
         
 
         <p>画流程图的工具：</p>
-<ol>
-<li><p><a href="https://www.processon.com/i/5b9ec6f7e4b075b9fe49b8eb" target="_blank" rel="noopener">processon.com</a></p>
-<p>免费的在线作图工具：流程图、思维导图等都可以，不用安装软件，有模版可用。</p>
+<h1 id="processon-com"><a href="#processon-com" class="headerlink" title="processon.com"></a><a href="https://www.processon.com/i/5b9ec6f7e4b075b9fe49b8eb" target="_blank" rel="noopener">processon.com</a></h1><p>免费的在线作图工具：流程图、思维导图等都可以，不用安装软件，有模版可用。</p>
 <hr>
 <p>用procession导出时经常会出现格式问题，如文字超出边框。高dpi选项只有PDF，没有图片，效果不好。所以，还是用VISIO好了。</p>
-</li>
-<li><p>VISIO by Microsoft</p>
-<p>20190410</p>
+<h1 id="VISIO-by-Microsoft"><a href="#VISIO-by-Microsoft" class="headerlink" title="VISIO by Microsoft"></a>VISIO by Microsoft</h1><p>20190410</p>
 <p>VISIO 2019 Pro，激活工具：<code>microkms_v18.09.25_office_visio激活工具.exe</code></p>
 <p>完美和Office融合，直接复制流程图，粘贴到word和PPT中即可，也可导出自定义DPI的图片、PDF等格式。</p>
+<h2 id="VISIO无法激活的问题"><a href="#VISIO无法激活的问题" class="headerlink" title="VISIO无法激活的问题"></a>VISIO无法激活的问题</h2><p>20190731</p>
+<p>使用上述KMS激活工具，使用了一段时间后要求重新激活，继续使用该KMS工具，显示激活成功但打开VISIO之后仍旧无法编辑，要求激活，多次尝试后无效，改用以下方式：</p>
+<ol>
+<li><p>确保是Vol版本即批量授权版本（因为之前用KMS激活过，所以是Vol版本，不用执行这一步），如果不是，则需要转化：</p>
+<p>复制以下代码，另存为.bat文件并用管理员权限打开：</p>
+<figure class="highlight bat hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">if</span> <span class="hljs-keyword">exist</span> "<span class="hljs-variable">%ProgramFiles%</span>\Microsoft Office\Office16\ospp.vbs" <span class="hljs-built_in">cd</span> /d "<span class="hljs-variable">%ProgramFiles%</span>\Microsoft Office\Office16"</span><br><span class="line"><span class="hljs-keyword">if</span> <span class="hljs-keyword">exist</span> "<span class="hljs-variable">%ProgramFiles(x86)%</span>\Microsoft Office\Office16\ospp.vbs" <span class="hljs-built_in">cd</span> /d "<span class="hljs-variable">%ProgramFiles(x86)%</span>\Microsoft Office\Office16"</span><br><span class="line">cscript ospp.vbs /rearm</span><br><span class="line"><span class="hljs-keyword">for</span> /f <span class="hljs-variable">%%x</span> <span class="hljs-keyword">in</span> ('<span class="hljs-built_in">dir</span> /b ..\root\Licenses16\visio???vl_kms*.xrm-ms') <span class="hljs-keyword">do</span> cscript ospp.vbs /inslic:"..\root\Licenses16\<span class="hljs-variable">%%x</span>" &gt;<span class="hljs-built_in">nul</span></span><br><span class="line"><span class="hljs-keyword">for</span> /f <span class="hljs-variable">%%x</span> <span class="hljs-keyword">in</span> ('<span class="hljs-built_in">dir</span> /b ..\root\Licenses16\visio???vl_mak*.xrm-ms') <span class="hljs-keyword">do</span> cscript ospp.vbs /inslic:"..\root\Licenses16\<span class="hljs-variable">%%x</span>" &gt;<span class="hljs-built_in">nul</span></span><br></pre></td></tr></table></figure>
 </li>
+<li><p>设置KMS密钥和KMS服务器</p>
+<p>打开Office的安装目录，也就是代码里的%ProgramFiles%\Microsoft Office\Office16\（64位）或者%ProgramFiles(x86)%\Microsoft Office\Office16\（32位）。</p>
+<p>选择在此处以管理员权限打开PowerShell，输入：</p>
+<figure class="highlight stylus hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript ospp<span class="hljs-selector-class">.vbs</span> /inpkey:<span class="hljs-number">9</span>BGNQ-K37YR-RQHF2-<span class="hljs-number">38</span>RQ3-<span class="hljs-number">7</span>VCBB</span><br></pre></td></tr></table></figure>
+<p>如果是其他版本的VISIO，可查询<a href="https://docs.microsoft.com/zh-cn/DeployOffice/vlactivation/gvlks" target="_blank" rel="noopener">微软官网</a>中提供的KMS密钥。</p>
+<p>设置KMS服务器：</p>
+<figure class="highlight stylus hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript ospp<span class="hljs-selector-class">.vbs</span> /sethst:kms<span class="hljs-selector-class">.luody</span><span class="hljs-selector-class">.info</span></span><br></pre></td></tr></table></figure>
+<p>这里的服务器选择了<a href="https://luodaoyi.com/p/ben-zhan-shang-xiankms-fu-wuyi-ju-ming-ling-ji-huo.html" target="_blank" rel="noopener">此博客</a>中提供的服务器网址，若不可用，请另外查找。</p>
+<p>连接KMS服务器进行激活：</p>
+<figure class="highlight stylus hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript ospp<span class="hljs-selector-class">.vbs</span> /act</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>看到powershell窗口提示：Product activation successful，即表示成功激活，打开VISIO，果然。</p>
+</li>
+<li><p>也可以尝试<a href="https://v0v.bid/" target="_blank" rel="noopener">https://v0v.bid/</a>，未经试验。</p>
+</li>
+</ol>
+<p>参考链接：</p>
+<ol>
+<li><a href="https://cjc7373.github.io/2018/12/01/Visio-KMS-Activate/" target="_blank" rel="noopener">https://cjc7373.github.io/2018/12/01/Visio-KMS-Activate/</a></li>
+<li><a href="https://luodaoyi.com/p/ben-zhan-shang-xiankms-fu-wuyi-ju-ming-ling-ji-huo.html" target="_blank" rel="noopener">https://luodaoyi.com/p/ben-zhan-shang-xiankms-fu-wuyi-ju-ming-ling-ji-huo.html</a></li>
 </ol>
 
     

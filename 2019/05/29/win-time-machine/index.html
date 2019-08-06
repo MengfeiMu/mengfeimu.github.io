@@ -130,7 +130,7 @@
         <span class="column is-narrow">
             
             
-            3 minutes read (About 427 words)
+            4 minutes read (About 584 words)
         </span>
         
     </div>
@@ -160,11 +160,20 @@
 <li><p><code>rsync: 未找到命令</code></p>
 <p>需要重新运行cygwin_setup.exe并安装<code>rsync</code>包。</p>
 </li>
-<li><p>执行同步命令：<code>sh ./rsync_tmbackup.sh backup_source_dir backup_destination_dir</code></p>
+<li><p>执行同步命令（onedrive/Apps目录下）：<code>sh ./rsync_tmbackup.sh backup_source_dir backup_destination_dir</code></p>
 </li>
 <li><p>如果是第一次同步，还需要向目标文件夹下创建新文件<code>backup.marker</code>，按照提示操作即可创建。</p>
 </li>
 <li><p>问题：目标文件夹下各个日期文件夹下都包含有所有文件，也就是说重复占用了很多空间（虽然没有进行拷贝），并非像项目介绍中所说的使用hardlink减少了文件体积，是我理解有误吗？</p>
+</li>
+<li><p>有些文件夹是临时文件，没必要同步，可以设置exclusion-file来跳过这些文件夹（如C:\OneDrive\apps\rsync-time-backup目录下的excluded_folders.txt）：</p>
+<figure class="highlight awk hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- <span class="hljs-regexp">/Github/</span>hexo_blogs<span class="hljs-regexp">/node_modules/</span></span><br><span class="line">- <span class="hljs-regexp">/Github/</span>hexo_blogs<span class="hljs-regexp">/.deploy_git/</span></span><br></pre></td></tr></table></figure>
+<p>该文件里内容的格式参考<a href="https://sites.google.com/site/rsync2u/home/rsync-tutorial/the-exclude-from-option" target="_blank" rel="noopener">The”exclude-from” file</a>。</p>
+<p><strong>执行同步命令如下：</strong></p>
+<figure class="highlight awk hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh .<span class="hljs-regexp">/rsync_tmbackup.sh /</span>cygdrive<span class="hljs-regexp">/c/</span>OneDrive<span class="hljs-regexp">/ /</span>cygdrive<span class="hljs-regexp">/g/</span>OneDrive_backup excluded_folders.txt</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>硬盘空间不够怎么办：</p>
+<p>可直接在硬盘备份目录下删除较早日期的备份，不影响其他备份。</p>
 </li>
 </ol>
 
