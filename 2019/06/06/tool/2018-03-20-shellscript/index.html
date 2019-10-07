@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <meta charset="utf-8">
+<title>Shell编程相关 - Mengfei Mu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+<meta name="description" content="shell编程工具与实例">
+
+
+
+
+
+
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=A-102161534-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'A-102161534-1');
+</script>
+
+
+    
+
+
+</head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                    
+                    Mengfei
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item "
+               href="/archives">Archives</a>
+            
+            <a class="navbar-item "
+               href="/tags">Tags</a>
+            
+            <a class="navbar-item "
+               href="/categories">categories</a>
+            
+            <a class="navbar-item "
+               href="https://mengfeimu.github.io/cv/">About</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/mengfeimu">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            Shell编程相关
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-06-06T09:54:46.000Z" itemprop="datePublished">Jun 6 2019</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/工具/">工具</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            3 minutes read (About 515 words)
+        </span>
+        
+    </div>
+    
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+
+    
+
+        <!-- add table of content -->
+        
+        <div id="toc" class="toc-article">
+          <strong class="toc-title"></strong>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#curl脚本批量下载http数据"><span class="toc-text">curl脚本批量下载http数据</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#scp-下载远程服务器文件到本地"><span class="toc-text">scp 下载远程服务器文件到本地</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#字符串操作"><span class="toc-text">字符串操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#获取文件列表名并替换成list形式"><span class="toc-text">获取文件列表名并替换成list形式</span></a></li></ol></li></ol>
+        </div>
+        
+
+        <h1 id="curl脚本批量下载http数据"><a href="#curl脚本批量下载http数据" class="headerlink" title="curl脚本批量下载http数据"></a>curl脚本批量下载http数据</h1><p>主要工具：<a href="https://curl.haxx.se" target="_blank" rel="noopener">curl</a>。</p>
+<p>在<a href="https://comtrade.un.org" target="_blank" rel="noopener">UN Comtrade Database</a>网站上获取全球贸易所有国家的双边数据时，可以用网站提供的网页端的<a href="https://comtrade.un.org/data/" target="_blank" rel="noopener">下载窗口</a>，但该端口不支持同时下载所有国家，进口国和出口国只能有一个选择all，因此，若要现在所有国家数据，会很费时费力，还好，该网站提供了<a href="https://comtrade.un.org/data/dev/portal" target="_blank" rel="noopener">API接口</a>，方便我们编写程序批量下载。</p>
+<p>该网站限制每小时只能查询下载100次，为了最大限度地提高下载效率，用以下代码，在unix终端（已在macOS上测试，未在Linux上测试）：</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># country_id 是一个国家代码的数组，一共254个国家，最后一个国家代码1000时为了凑数255</span></span><br><span class="line">country_id=(4 8 12 20 24 660 28 32 51 533 36 40 31 44 48 50 52 112 56 58 84 204 60 64 68 535 70 72 92 76 96 100 854 108 132 116 120 124 136 140 148 152 156 344 446 170 174 178 184 188 384 191 192 531 196 203 200 408 180 208 262 212 214 588 218 818 222 226 232 233 231 97 234 238 242 246 886 278 866 720 230 280 582 590 592 868 717 736 835 810 890 836 251 254 258 583 266 270 268 276 288 292 300 304 308 312 320 324 624 328 332 336 340 348 352 699 356 360 364 368 372 376 381 388 392 400 398 404 296 414 417 418 428 422 426 430 434 440 442 450 454 458 462 466 470 584 474 478 480 175 484 496 499 500 504 508 104 580 516 524 530 532 528 540 554 558 562 566 579 512 490 586 585 591 598 600 459 604 608 616 620 634 410 498 638 642 643 646 647 461 654 659 658 662 534 666 670 882 674 678 457 682 686 688 891 690 694 702 703 705 711 90 706 710 728 724 144 275 729 740 748 752 757 760 762 807 764 626 768 772 776 780 788 792 795 796 798 800 804 784 826 834 858 850 842 841 860 548 862 704 876 887 894 716 1000)</span><br><span class="line"><span class="hljs-comment"># 查询的年份</span></span><br><span class="line">year=2016</span><br><span class="line"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> $( seq 0 50); <span class="hljs-keyword">do</span></span><br><span class="line">	<span class="hljs-comment"># cc 代表商品代码，若要下载其他商品，请替代掉以下http中的cc=8703</span></span><br><span class="line">	<span class="hljs-comment"># type: C-commodities, S-services</span></span><br><span class="line">	<span class="hljs-comment"># freq: A-Annual, M-Monthly</span></span><br><span class="line">	<span class="hljs-comment"># px: 分类代码，本文采用2012年的代码H4</span></span><br><span class="line">	<span class="hljs-comment"># 其他代码的定义请参考https://comtrade.un.org/data/doc/api/#DataRequests</span></span><br><span class="line">	curl <span class="hljs-string">"https://comtrade.un.org/api/get?max=50000&amp;type=C&amp;freq=A&amp;px=H4&amp;ps=<span class="hljs-variable">$&#123;year&#125;</span>&amp;r=<span class="hljs-variable">$&#123;country_id[`expr 5 \* $&#123;i&#125;</span>`]&#125;%2C<span class="hljs-variable">$&#123;country_id[`expr 5 \* $&#123;i&#125;</span> + 1`]&#125;%2C<span class="hljs-variable">$&#123;country_id[`expr 5 \* $&#123;i&#125;</span> + 2`]&#125;%2C<span class="hljs-variable">$&#123;country_id[`expr 5 \* $&#123;i&#125;</span> + 3`]&#125;%2C<span class="hljs-variable">$&#123;country_id[`expr 5 \* $&#123;i&#125;</span> + 4`]&#125;&amp;p=all&amp;rg=all&amp;cc=8703&amp;uitoken=ea87a35d7e9663b5afa4236febb8d495&amp;fmt=csv"</span> &gt;&gt; <span class="hljs-variable">$&#123;year&#125;</span>.csv</span><br><span class="line"><span class="hljs-keyword">done</span></span><br><span class="line"><span class="hljs-comment"># 删除重复的表头和查询无效的项目</span></span><br><span class="line">sed -i <span class="hljs-string">'/query/d'</span> <span class="hljs-variable">$&#123;year&#125;</span>.csv</span><br><span class="line">sed -i <span class="hljs-string">'/Classification/d'</span> <span class="hljs-variable">$&#123;year&#125;</span>.csv</span><br></pre></td></tr></table></figure>
+<h1 id="scp-下载远程服务器文件到本地"><a href="#scp-下载远程服务器文件到本地" class="headerlink" title="scp 下载远程服务器文件到本地"></a><code>scp</code> 下载远程服务器文件到本地</h1><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># copy from HPC to Hydro</span></span><br><span class="line">scp mumf@192.168.29.10:~/./runoff_obs.tar.gz .</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># copy from Hydro to PC</span></span><br><span class="line">scp mumf@159.226.115.218:~/runoff_obs.tar.gz ~/Downloads/</span><br></pre></td></tr></table></figure>
+<h1 id="字符串操作"><a href="#字符串操作" class="headerlink" title="字符串操作"></a>字符串操作</h1><h2 id="获取文件列表名并替换成list形式"><a href="#获取文件列表名并替换成list形式" class="headerlink" title="获取文件列表名并替换成list形式"></a>获取文件列表名并替换成list形式</h2><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># 查找以任意数字结尾的文件</span></span><br><span class="line"><span class="hljs-comment"># $表示结尾，不加$表示开头</span></span><br><span class="line">str=`ls | grep <span class="hljs-string">'[0-9]$'</span>`</span><br><span class="line"><span class="hljs-comment"># 给前后加上单引号</span></span><br><span class="line"><span class="hljs-keyword">for</span> s <span class="hljs-keyword">in</span> <span class="hljs-variable">$str</span>;<span class="hljs-keyword">do</span> <span class="hljs-built_in">echo</span> <span class="hljs-string">"'"</span><span class="hljs-variable">$&#123;s&#125;</span><span class="hljs-string">"',"</span>; don</span><br></pre></td></tr></table></figure>
+
+    
+
+
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/macOS/">#macOS</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/unix/">#unix</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/shell/">#shell</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/2019/06/06/tool/2018-07-27-sublime/">Sublime Text 3</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/2019/06/06/tool/2018-07-28-移动硬盘加载/">macOS下无法加载移动硬盘</a>
+            
+        </span>
+    </div>
+    
+
+</article>
+
+
+
+
+<div class="comments">
+    <h3 class="title is-4">Comments</h3>
+    
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://mengfeimu.github.io/2019/06/06/tool/2018-03-20-shellscript/';
+        this.page.identifier = '2019/06/06/tool/2018-03-20-shellscript/';
+        
+        this.language = 'en';
+        
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'mengfeimu' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+
+
+
+
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2019 Mengfei Mu&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+</script>
+
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+
+    
+
+
+<script src="/js/script.js"></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+</body>
+</html>

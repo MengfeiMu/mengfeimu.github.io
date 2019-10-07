@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <meta charset="utf-8">
+<title>Python环境搭建 - Mengfei Mu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+<meta name="description" content="python编程相关命令记录">
+
+
+
+
+
+
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=A-102161534-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'A-102161534-1');
+</script>
+
+
+    
+
+
+</head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                    
+                    Mengfei
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item "
+               href="/archives">Archives</a>
+            
+            <a class="navbar-item "
+               href="/tags">Tags</a>
+            
+            <a class="navbar-item "
+               href="/categories">categories</a>
+            
+            <a class="navbar-item "
+               href="https://mengfeimu.github.io/cv/">About</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/mengfeimu">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            Python环境搭建
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-06-06T09:54:53.000Z" itemprop="datePublished">Jun 6 2019</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/工具/">工具</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            5 minutes read (About 814 words)
+        </span>
+        
+    </div>
+    
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+
+    
+
+        <!-- add table of content -->
+        
+        <div id="toc" class="toc-article">
+          <strong class="toc-title"></strong>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#安装省心的Anaconda"><span class="toc-text">安装省心的Anaconda</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装Jupyter插件"><span class="toc-text">安装Jupyter插件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#创建新conda环境"><span class="toc-text">创建新conda环境</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#condarc-conda-configure-file"><span class="toc-text">.condarc conda configure file</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#导出当前环境的各种设置"><span class="toc-text">导出当前环境的各种设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看env列表"><span class="toc-text">查看env列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除某一环境"><span class="toc-text">删除某一环境</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#改变anaconda-prompt窗口启动的默认目录位置和默认环境env"><span class="toc-text">改变anaconda prompt窗口启动的默认目录位置和默认环境env</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#常用的packages"><span class="toc-text">常用的packages</span></a></li></ol>
+        </div>
+        
+
+        <h1 id="安装省心的Anaconda"><a href="#安装省心的Anaconda" class="headerlink" title="安装省心的Anaconda"></a>安装省心的Anaconda</h1><p>最简单的安装方法是，直接下载exe安装Anaconda，则安装完成后即有了Jupyter，无需重新安装。</p>
+<p>不过，还是建议安装<a href="https://conda.io/miniconda.html" target="_blank" rel="noopener">miniconda</a>，所需空间小，后续需要什么再用conda命令安装，也很方便。</p>
+<p>接着安装Jupyter Notebook:</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install jupyter</span><br></pre></td></tr></table></figure>
+<p>以上，就基本搭建了一个基础版本的python。</p>
+<h1 id="安装Jupyter插件"><a href="#安装Jupyter插件" class="headerlink" title="安装Jupyter插件"></a>安装Jupyter插件</h1><p>Jupyter Notebook的cell和代码过多时，上下翻页很不方便，浪费时间，因此想要安装插件实现目录的功能，找到了<a href="https://github.com/ipython-contrib/jupyter_contrib_nbextensions" target="_blank" rel="noopener">jupyter_contrib_nbextensions</a>，安装过程很方便：</p>
+<p>提前关掉正在运行的jupyter notebook。</p>
+<p>以管理员身份打开conda命令行，安装：</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install -c conda-forge jupyter_contrib_nbextensions</span><br></pre></td></tr></table></figure>
+<p>然后，再重新打开jupyter notebook，菜单栏即多了Nbextensions一项，选择需要的插件功能即可，比如目录。</p>
+<p>一些建议打开的插件：</p>
+<ul>
+<li><p>目录 Table of Contents</p>
+</li>
+<li><p>代码美化 Code prettify</p>
+</li>
+<li><p>代码折叠 Codefolding</p>
+</li>
+<li><p>通知 Notify</p>
+<p>运行完毕后会弹出窗口提示notebook处于空闲状态。</p>
+</li>
+</ul>
+<h1 id="创建新conda环境"><a href="#创建新conda环境" class="headerlink" title="创建新conda环境"></a>创建新conda环境</h1><p>最好不要在<code>base</code>环境下安装各种包，以免包之间有冲突，尤其是python2和python3，影响运行。为每个项目创建一个新环境，并制定包的版本号：</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n water-energy</span><br></pre></td></tr></table></figure>
+<p><del>默认的env目录是<code>~\.conda</code>，若要指定目录，则需添加<code>--prefix</code>：</del></p>
+<figure class="highlight taggerscript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create --prefix C:<span class="hljs-symbol">\P</span>rogramData<span class="hljs-symbol">\M</span>iniconda3<span class="hljs-symbol">\e</span>nvs<span class="hljs-symbol">\w</span>ater-energy</span><br></pre></td></tr></table></figure>
+<p>在现在笔记本安装的env默认目录是<code>C:\ProgramData\Miniconda3\envs</code>，不用更改即可。</p>
+<p><strong>如何将envs数据自动备份或同步？</strong></p>
+<h2 id="condarc-conda-configure-file"><a href="#condarc-conda-configure-file" class="headerlink" title=".condarc conda configure file"></a><code>.condarc</code> conda configure file</h2><p>默认该文件是没有的，第一次在conda窗口执行<code>conda config</code>时便会在home directory下自动创建。在该文件中添加设置，如每次创建新env时自动安装的包等。</p>
+<h2 id="导出当前环境的各种设置"><a href="#导出当前环境的各种设置" class="headerlink" title="导出当前环境的各种设置"></a>导出当前环境的各种设置</h2><figure class="highlight routeros hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda env <span class="hljs-builtin-name">export</span> &gt; base_env.yml</span><br></pre></td></tr></table></figure>
+<p>然后，将<code>base_env.yml</code>复制到另一台计算机（win和macOS不通用；需要在yml文件中删除含有nbextensions的项目[搜索nb]，否则会报错，nbextensions需要单独安装）中，并根据该文件来创建env：</p>
+<figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-selector-tag">conda</span> <span class="hljs-selector-tag">env</span> <span class="hljs-selector-tag">create</span> <span class="hljs-selector-tag">-f</span> <span class="hljs-selector-tag">base_env</span><span class="hljs-selector-class">.yml</span></span><br></pre></td></tr></table></figure>
+<p>激活环境：</p>
+<figure class="highlight applescript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda <span class="hljs-built_in">activate</span> env_name</span><br></pre></td></tr></table></figure>
+<p>退出环境：</p>
+<figure class="highlight ebnf hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attribute">conda deactivate</span></span><br></pre></td></tr></table></figure>
+<h2 id="查看env列表"><a href="#查看env列表" class="headerlink" title="查看env列表"></a>查看env列表</h2><figure class="highlight applescript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda env <span class="hljs-built_in">list</span></span><br></pre></td></tr></table></figure>
+<h2 id="删除某一环境"><a href="#删除某一环境" class="headerlink" title="删除某一环境"></a>删除某一环境</h2><figure class="highlight lua hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda env <span class="hljs-built_in">remove</span> <span class="hljs-comment">--name env_name</span></span><br></pre></td></tr></table></figure>
+<h1 id="改变anaconda-prompt窗口启动的默认目录位置和默认环境env"><a href="#改变anaconda-prompt窗口启动的默认目录位置和默认环境env" class="headerlink" title="改变anaconda prompt窗口启动的默认目录位置和默认环境env"></a>改变<code>anaconda prompt</code>窗口启动的默认目录位置和默认环境env</h1><ul>
+<li><p>目录位置：右键<code>anaconda prompt</code>，属性，起始位置（写上想要默认开启的目录位置）</p>
+</li>
+<li><p>默认env: 一般默认的env是<code>base</code>，右键<code>anaconda prompt</code>属性中的目标为<code>%windir%\System32\cmd.exe &quot;/K&quot; C:\ProgramData\Miniconda3\Scripts\activate.bat C:\ProgramData\Miniconda3</code></p>
+<p>把最后的目录<code>C:\ProgramData\Miniconda3</code>替换为想要启动的目录位置（一般在<code>.\Miniconda3\envs\your_env_name</code>中），比如<code>C:\ProgramData\Miniconda3\envs\water-energy</code></p>
+<blockquote>
+<p>难道没有anaconda命令可以完成这件事吗？</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="常用的packages"><a href="#常用的packages" class="headerlink" title="常用的packages"></a>常用的packages</h1><ul>
+<li><p>pandas: 与csv, txt, excel等格式数据交互的包。</p>
+</li>
+<li><p>numpy: 数组处理与计算</p>
+</li>
+<li></li>
+</ul>
+
+    
+
+
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Anaconda/">#Anaconda</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/python/">#python</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Jupyter/">#Jupyter</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/2019/06/07/scihub-links/">Scihub可用链接</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/2019/06/06/tool/2018-07-27-git/">Git工具安装与使用</a>
+            
+        </span>
+    </div>
+    
+
+</article>
+
+
+
+
+<div class="comments">
+    <h3 class="title is-4">Comments</h3>
+    
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://mengfeimu.github.io/2019/06/06/tool/2018-01-20-python/';
+        this.page.identifier = '2019/06/06/tool/2018-01-20-python/';
+        
+        this.language = 'en';
+        
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'mengfeimu' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+
+
+
+
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2019 Mengfei Mu&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+</script>
+
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+
+    
+
+
+<script src="/js/script.js"></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+</body>
+</html>

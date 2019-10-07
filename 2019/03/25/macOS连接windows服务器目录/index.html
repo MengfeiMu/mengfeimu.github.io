@@ -130,7 +130,7 @@
         <span class="column is-narrow">
             
             
-            a few seconds read (About 72 words)
+            2 minutes read (About 258 words)
         </span>
         
     </div>
@@ -143,13 +143,16 @@
         
         <div id="toc" class="toc-article">
           <strong class="toc-title"></strong>
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#macOS连接自己的windows电脑实现文件共享"><span class="toc-text">macOS连接自己的windows电脑实现文件共享</span></a></li></ol>
         </div>
         
 
         <p>macOS connect to network windows folder</p>
 <p>在Windows上，只需打开文件管理器，输入文件夹地址如：<code>\\swsatlas\CentersGIS\CWS\WaterSupply</code>然后回车即可。</p>
 <p>在macOS上：<code>打开Finder -&gt; Go -&gt; Connect to Server -&gt; smb://swsatlas</code>，然后按提示输入用户名密码，操作即可。</p>
+<h2 id="macOS连接自己的windows电脑实现文件共享"><a href="#macOS连接自己的windows电脑实现文件共享" class="headerlink" title="macOS连接自己的windows电脑实现文件共享"></a>macOS连接自己的windows电脑实现文件共享</h2><p>按照上面的思路，将自己的windows电脑设置成一个服务器，然后共享相关文件夹，即可实现在macOS上向windows读取/写入文件。</p>
+<p>主要参考链接 <a href="https://jingyan.baidu.com/article/fec7a1e5cdfb151190b4e7aa.html" target="_blank" rel="noopener">Windows与MacOS怎么通过smb协议共享文件夹目录</a></p>
+<p>为方便，我把办公室台式机的下载文件夹设置成了共享，这样以后就不用每次都用移动硬盘转移文件了，速度还是很快的，直接打开文件，几乎没有延迟，就像在macOS本地加载了一块硬盘差不多。</p>
 
     
 
@@ -171,7 +174,7 @@
         </span>
         <span class="column is-12-mobile is-half-desktop  article-nav-next">
             
-            <a href="/2019/03/22/tool/python-shapefile/">python读取.shp文件</a>
+            <a href="/2019/03/22/tool/python-watershed-boundary/">提取流域边界、河流等信息</a>
             
         </span>
     </div>
