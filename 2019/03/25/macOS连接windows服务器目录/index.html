@@ -91,7 +91,7 @@
         
         <div class="navbar-menu navbar-end">
             
-            <a class="navbar-item search" title="Search" href="javascript:;">
+            <a class="navbar-item search" title="搜索" href="javascript:;">
                 <i class="fas fa-search"></i>
             </a>
             
@@ -118,7 +118,7 @@
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
         <span class="column is-narrow">
-            <time datetime="2019-03-25T14:26:07.000Z" itemprop="datePublished">Mar 25 2019</time>
+            <time datetime="2019-03-25T14:26:07.000Z" itemprop="datePublished">3月 25 2019</time>
         </span>
         
         <span class="column is-narrow article-category">
@@ -130,7 +130,7 @@
         <span class="column is-narrow">
             
             
-            2 minutes read (About 258 words)
+            3 分钟 读完 (约 424 字)
         </span>
         
     </div>
@@ -152,7 +152,11 @@
 <p>在macOS上：<code>打开Finder -&gt; Go -&gt; Connect to Server -&gt; smb://swsatlas</code>，然后按提示输入用户名密码，操作即可。</p>
 <h2 id="macOS连接自己的windows电脑实现文件共享"><a href="#macOS连接自己的windows电脑实现文件共享" class="headerlink" title="macOS连接自己的windows电脑实现文件共享"></a>macOS连接自己的windows电脑实现文件共享</h2><p>按照上面的思路，将自己的windows电脑设置成一个服务器，然后共享相关文件夹，即可实现在macOS上向windows读取/写入文件。</p>
 <p>主要参考链接 <a href="https://jingyan.baidu.com/article/fec7a1e5cdfb151190b4e7aa.html" target="_blank" rel="noopener">Windows与MacOS怎么通过smb协议共享文件夹目录</a></p>
-<p>为方便，我把办公室台式机的下载文件夹设置成了共享，这样以后就不用每次都用移动硬盘转移文件了，速度还是很快的，直接打开文件，几乎没有延迟，就像在macOS本地加载了一块硬盘差不多。</p>
+<p>首先需要在windows账户中新建一个账户用于共享，取名office_pc_share，密码存储于macOS中。</p>
+<p>为方便，我把办公室台式机的下载文件夹设置成了共享（在资源管理器中“共享”一栏中设置），这样以后就不用每次都用移动硬盘转移文件了，速度还是很快的，直接打开文件，几乎没有延迟，就像在macOS本地加载了一块硬盘差不多。</p>
+<p>进一步，将整个OneDrive目录共享给该用户名，办公室内网环境下就不需要在macOS上登录onedrive软件了（macOS版本的onedrive经常内存溢出导致发热严重）。</p>
+<p>C:\OneDrive\Github\hexo_blogs文件夹也可以直接在macOS上远程打开，并实现hexopush，更新网页端内容。</p>
+<p>如果无法连接，先查看windows端的防火墙是否关闭。</p>
 
     
 
@@ -186,14 +190,14 @@
 
 
 <div class="comments">
-    <h3 class="title is-4">Comments</h3>
+    <h3 class="title is-4">评论</h3>
     
 <script>
     var disqus_config = function () {
         this.page.url = 'https://mengfeimu.github.io/2019/03/25/macOS连接windows服务器目录/';
         this.page.identifier = '2019/03/25/macOS连接windows服务器目录/';
         
-        this.language = 'en';
+        this.language = 'zh';
         
     };
     (function() {
@@ -256,7 +260,7 @@
     window.FontAwesomeConfig = {
         searchPseudoElements: true
     }
-    moment.locale("en-AU");
+    moment.locale("zh-CN");
 </script>
 
 
@@ -301,7 +305,7 @@
     <div class="searchbox-mask"></div>
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <input type="text" class="searchbox-input ins-search-input" placeholder="站内搜索" />
             <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">
@@ -313,11 +317,11 @@
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Posts',
-                PAGES: 'Pages',
-                CATEGORIES: 'Categories',
-                TAGS: 'Tags',
-                UNTITLED: '(Untitled)',
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
             },
             CONTENT_URL: '/content.json',
         };
