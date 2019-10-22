@@ -91,7 +91,7 @@
         
         <div class="navbar-menu navbar-end">
             
-            <a class="navbar-item search" title="搜索" href="javascript:;">
+            <a class="navbar-item search" title="Search" href="javascript:;">
                 <i class="fas fa-search"></i>
             </a>
             
@@ -118,7 +118,7 @@
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
         <span class="column is-narrow">
-            <time datetime="2019-03-11T13:42:22.000Z" itemprop="datePublished">3月 11 2019</time>
+            <time datetime="2019-03-11T13:42:22.000Z" itemprop="datePublished">Mar 11 2019</time>
         </span>
         
         <span class="column is-narrow article-category">
@@ -130,7 +130,7 @@
         <span class="column is-narrow">
             
             
-            11 分钟 读完 (约 1589 字)
+            11 minutes read (About 1589 words)
         </span>
         
     </div>
@@ -174,7 +174,7 @@
 <p>可以在命令后加上<code>&amp;</code>放在后台运行，但由于每个文件都要和http通讯，很费时间，平均下载一天的数据文件（24个文件）需要下载40s，当然，可以考虑并行下载，会快点。</p>
 <p>wget并行下载：</p>
 <p>将以下内容存储为文件<code>download_NLDAS.sh</code>:</p>
-<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#</span>!/bin/bash</span><br><span class="line">infile="$1" # 这里的1是指执行该文件时添加的第一个参数</span><br><span class="line">while IFS='' read -r url || [[ -n "$url" ]]; do</span><br><span class="line">    wget --load-cookies ./.urs_cookies --save-cookies ./.urs_cookies --auth-no-challenge=on --keep-session-cookies --content-disposition $url &amp;&gt;/dev/null &amp; </span><br><span class="line">done &lt; "$1"</span><br><span class="line">wait </span><br><span class="line"><span class="hljs-meta">#</span> &amp;&gt;/dev/nul 命令将滚动的输出隐去，设置为silient模式</span><br><span class="line"><span class="hljs-meta">#</span> &amp;：并行运算，将所有命令并行放在后台运行</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#</span><span class="hljs-bash">!/bin/bash</span></span><br><span class="line">infile="$1" # 这里的1是指执行该文件时添加的第一个参数</span><br><span class="line">while IFS='' read -r url || [[ -n "$url" ]]; do</span><br><span class="line">    wget --load-cookies ./.urs_cookies --save-cookies ./.urs_cookies --auth-no-challenge=on --keep-session-cookies --content-disposition $url &amp;&gt;/dev/null &amp; </span><br><span class="line">done &lt; "$1"</span><br><span class="line">wait </span><br><span class="line"><span class="hljs-meta">#</span><span class="hljs-bash"> &amp;&gt;/dev/nul 命令将滚动的输出隐去，设置为silient模式</span></span><br><span class="line"><span class="hljs-meta">#</span><span class="hljs-bash"> &amp;：并行运算，将所有命令并行放在后台运行</span></span><br></pre></td></tr></table></figure>
 <p>将所有需要下载的文件网址写入文件<code>urls.txt</code>，这里可以借用python，</p>
 <p><del>执行命令并下载：</del></p>
 <figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh ./download_NLDAS.sh urls.txt</span><br></pre></td></tr></table></figure>
@@ -186,7 +186,7 @@
 <p>Fork: Resource temporatily unavailable</p>
 </blockquote>
 <p>因此，需要另外写个<code>main.sh</code>来调用<code>download_NLDAS.sh</code>，解决这种问题。由于是下载hourly的数据，因此每次调用<code>download_NLDAS.sh</code>来下载24个文件即一天的数据，如此循环：</p>
-<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#</span>!/bin/bash</span><br><span class="line"><span class="hljs-meta">#</span> main.sh</span><br><span class="line">cd ~/Downloads/nldas</span><br><span class="line">n=`cat urls.txt|wc -l`</span><br><span class="line"><span class="hljs-meta">#</span> echo $n</span><br><span class="line">for ((i=1; i&lt;=$(($n/24)); i++));do</span><br><span class="line"><span class="hljs-meta">#</span>for i in &#123;1..$(($n/24))&#125;;do</span><br><span class="line">	line1=$(($(($i*24))-23))</span><br><span class="line">	line2=$(($i*24))</span><br><span class="line">    # echo $line1</span><br><span class="line">    # echo $line2</span><br><span class="line"> 	echo "$i of $(($n/24)) ..."</span><br><span class="line">    sed -n "$&#123;line1&#125;,$&#123;line2&#125;p" ./urls.txt &gt; ./urls.temp.txt</span><br><span class="line">    sh ./download_NLDAS.sh ./urls.temp.txt</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">if [ ! -d "./netcdfs" ]; then</span><br><span class="line">    mkdir ./netcdfs</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">mv ./*.nc ./netcdfs/</span><br><span class="line"></span><br><span class="line">rm ./urls.temp.txt</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#</span><span class="hljs-bash">!/bin/bash</span></span><br><span class="line"><span class="hljs-meta">#</span><span class="hljs-bash"> main.sh</span></span><br><span class="line">cd ~/Downloads/nldas</span><br><span class="line">n=`cat urls.txt|wc -l`</span><br><span class="line"><span class="hljs-meta">#</span><span class="hljs-bash"> <span class="hljs-built_in">echo</span> <span class="hljs-variable">$n</span></span></span><br><span class="line">for ((i=1; i&lt;=$(($n/24)); i++));do</span><br><span class="line"><span class="hljs-meta">#</span><span class="hljs-bash"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> &#123;1..$((<span class="hljs-variable">$n</span>/24))&#125;;<span class="hljs-keyword">do</span></span></span><br><span class="line">	line1=$(($(($i*24))-23))</span><br><span class="line">	line2=$(($i*24))</span><br><span class="line">    # echo $line1</span><br><span class="line">    # echo $line2</span><br><span class="line"> 	echo "$i of $(($n/24)) ..."</span><br><span class="line">    sed -n "$&#123;line1&#125;,$&#123;line2&#125;p" ./urls.txt &gt; ./urls.temp.txt</span><br><span class="line">    sh ./download_NLDAS.sh ./urls.temp.txt</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">if [ ! -d "./netcdfs" ]; then</span><br><span class="line">    mkdir ./netcdfs</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">mv ./*.nc ./netcdfs/</span><br><span class="line"></span><br><span class="line">rm ./urls.temp.txt</span><br></pre></td></tr></table></figure>
 <p>运行<code>main.sh</code>所需要的文件有，缺一不可：</p>
 <ul>
 <li><code>main.sh</code></li>
@@ -243,14 +243,14 @@
 
 
 <div class="comments">
-    <h3 class="title is-4">评论</h3>
+    <h3 class="title is-4">Comments</h3>
     
 <script>
     var disqus_config = function () {
         this.page.url = 'https://mengfeimu.github.io/2019/03/11/NLDAS/';
         this.page.identifier = '2019/03/11/NLDAS/';
         
-        this.language = 'zh';
+        this.language = 'en';
         
     };
     (function() {
@@ -285,6 +285,35 @@
 
             
             
+<div class="column is-narrow has-text-centered">
+    <div class="dropdown is-up is-right is-hoverable" style="margin-top: -0.2em;">
+        <div class="dropdown-trigger">
+            <button class="button is-small" aria-haspopup="true" aria-controls="dropdown-menu7">
+                <span class="icon">
+                    <i class="fas fa-globe"></i>
+                </span>
+                <span>English</span>
+                <span class="icon is-small">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+            </button>
+        </div>
+        <div class="dropdown-menu has-text-left" role="menu">
+            <div class="dropdown-content">
+            
+                <a href="/2019/03/11/NLDAS/" class="dropdown-item">
+                    English
+                </a>
+            
+                <a href="/zh-cn/2019/03/11/NLDAS/" class="dropdown-item">
+                    简体中文
+                </a>
+            
+            </div>
+        </div>
+    </div>
+</div>
+
         </div>
     </div>
 </footer>
@@ -313,7 +342,7 @@
     window.FontAwesomeConfig = {
         searchPseudoElements: true
     }
-    moment.locale("zh-CN");
+    moment.locale("en-AU");
 </script>
 
 
@@ -358,7 +387,7 @@
     <div class="searchbox-mask"></div>
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="站内搜索" />
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
             <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">
@@ -370,11 +399,11 @@
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: '文章',
-                PAGES: '页面',
-                CATEGORIES: '分类',
-                TAGS: '标签',
-                UNTITLED: '(无标题)',
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
             },
             CONTENT_URL: '/content.json',
         };
