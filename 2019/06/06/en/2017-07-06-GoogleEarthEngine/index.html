@@ -2,11 +2,13 @@
 <html class="has-navbar-fixed-top">
 <head>
     <meta charset="utf-8">
-<title>Archives: 2019/10 - Mengfei</title>
+<title>Google Earth Engine - Mengfei</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
 
+
+<meta name="description" content="Google Earth Engine 谷歌地球引擎">
 
 
 
@@ -76,13 +78,13 @@
         <div class="navbar-menu navbar-start">
             
             <a class="navbar-item "
-               href="/archives">Archives</a>
+               href="/en/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/tags">Tags</a>
+               href="/en/tags">Tags</a>
             
             <a class="navbar-item "
-               href="/categories">Categories</a>
+               href="/en/categories">Categories</a>
             
             <a class="navbar-item "
                href="https://mengfeimu.github.io/cv/">About</a>
@@ -110,22 +112,82 @@
 
     <section class="section">
     <div class="container">
-    
-    
-        <div class="archive content">
-            <h4 class="title is-4" id="2019">2019</h4>
-            <div class="articles">
+    <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            Google Earth Engine
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-06-06T09:54:46.000Z" itemprop="datePublished">Jun 6 2019</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/en/categories/工具/">工具</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
             
-                <div class="article content>">
-                    <time class="is-text-small" datetime="2019-10-24T03:10:29.000Z" itemprop="datePublished">
-                        Oct 24</time>
-                    <h6 class="title is-6"><a href="/2019/10/24/en/2017-07-07-reading/">那些年读过的文字</a></h6>
-                </div>
             
-            </div>
+            a few seconds read (About 49 words)
+        </span>
+        
+    </div>
+    
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+
+    
+
+        <!-- add table of content -->
+        
+        <div id="toc" class="toc-article">
+          <strong class="toc-title"></strong>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Remove-geometry-from-feature-collection"><span class="toc-text">1. Remove geometry from feature collection</span></a></li></ol>
         </div>
+        
+
+        <p>网址：<a href="https://code.earthengine.google.com/" target="_blank" rel="noopener">https://code.earthengine.google.com/</a></p>
+<h2 id="1-Remove-geometry-from-feature-collection"><a href="#1-Remove-geometry-from-feature-collection" class="headerlink" title="1. Remove geometry from feature collection"></a>1. Remove geometry from feature collection</h2><p>Create a function like below:<br><figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> rmGeo = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">feature</span>) </span>&#123;  </span><br><span class="line">    <span class="hljs-keyword">return</span> ee.Feature(feature.select([<span class="hljs-string">'property 1'</span>, <span class="hljs-string">'property 2'</span>], <span class="hljs-literal">null</span>, <span class="hljs-literal">false</span>));  </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>and then apply this function to the feature collection named <code>fc</code>:<br><figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> newFc = fc.map(rmGeo);</span><br></pre></td></tr></table></figure></p>
+
+    
+
+
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/en/tags/GEE/">#GEE</a></span>
+    
+    </div>
     
     
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/2019/06/06/en/2016-12-30-sedAwkUnixCommand/">Sed &amp; Awk Commands</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/2019/06/06/en/2017-07-18-ImageMagick/">ImageMagick</a>
+            
+        </span>
+    </div>
+    
+
+</article>
+
+
+
+
+
+
+
+
     </div>
 </section>
     <footer class="footer">
@@ -156,11 +218,11 @@
         <div class="dropdown-menu has-text-left" role="menu">
             <div class="dropdown-content">
             
-                <a href="/archives/2019/10/index.html" class="dropdown-item">
+                <a href="/2019/06/06/en/2017-07-06-GoogleEarthEngine/" class="dropdown-item">
                     简体中文
                 </a>
             
-                <a href="/en/archives/2019/10/index.html" class="dropdown-item">
+                <a href="/en/2019/06/06/en/2017-07-06-GoogleEarthEngine/" class="dropdown-item">
                     English
                 </a>
             

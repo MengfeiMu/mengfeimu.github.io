@@ -2,11 +2,13 @@
 <html class="has-navbar-fixed-top">
 <head>
     <meta charset="utf-8">
-<title>Sed &amp; Awk Commands - Mengfei</title>
+<title>ImageMagick - Mengfei</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
 
+
+<meta name="description" content="ImageMagick">
 
 
 
@@ -59,10 +61,10 @@
 <nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
     <div class="container">
         <div class="navbar-brand">
-            <a class="navbar-item navbar-logo" href="/">
+            <a class="navbar-item navbar-logo" href="/en">
                 
                     
-                    首页
+                    Mengfei
                     
                 
             </a>
@@ -76,22 +78,22 @@
         <div class="navbar-menu navbar-start">
             
             <a class="navbar-item "
-               href="/archives">归档</a>
+               href="/en/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/tags">标签</a>
+               href="/en/tags">Tags</a>
             
             <a class="navbar-item "
-               href="/categories">分类</a>
+               href="/en/categories">Categories</a>
             
             <a class="navbar-item "
-               href="https://mengfeimu.github.io/cv-zh/">简历</a>
+               href="https://mengfeimu.github.io/cv/">About</a>
             
         </div>
         
         <div class="navbar-menu navbar-end">
             
-            <a class="navbar-item search" title="搜索" href="javascript:;">
+            <a class="navbar-item search" title="Search" href="javascript:;">
                 <i class="fas fa-search"></i>
             </a>
             
@@ -113,24 +115,24 @@
     <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
-            Sed &amp; Awk Commands
+            ImageMagick
         
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
         <span class="column is-narrow">
-            <time datetime="2019-06-06T09:54:52.000Z" itemprop="datePublished">6月 6 2019</time>
+            <time datetime="2019-06-06T09:54:46.000Z" itemprop="datePublished">Jun 6 2019</time>
         </span>
         
         <span class="column is-narrow article-category">
             <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/工具/">工具</a>
+            <a class="article-category-link" href="/en/categories/工具/">工具</a>
         </span>
         
         
         <span class="column is-narrow">
             
             
-            2 分钟 读完 (约 299 字)
+            a few seconds read (About 23 words)
         </span>
         
     </div>
@@ -143,20 +145,12 @@
         
         <div id="toc" class="toc-article">
           <strong class="toc-title"></strong>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Use-Shell-variables-in-Sed"><span class="toc-text">1. Use Shell variables in Sed</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Overlap-problem-when-appending-a-string-to-a-shell-variable-passed-from-awk-output"><span class="toc-text">2. Overlap problem when appending a string to a shell variable passed from awk output</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-combine-several-figures-into-one"><span class="toc-text">1. combine several figures into one</span></a></li></ol>
         </div>
         
 
-        <ul>
-<li>content<br>{:toc}</li>
-</ul>
-<p><em>Sed and Awk are two powerful tools to manipulate text formatted files on Unix/Linux.<br>This is not a tutorial but some real codes applied in my research.<br>For basic introduction and syntax, please go to<br><a href="https://www.tutorialspoint.com/sed/" target="_blank" rel="noopener">Sed</a> or<br><a href="https://www.tutorialspoint.com/awk/" target="_blank" rel="noopener">Awk</a>.</em> </p>
-<h2 id="1-Use-Shell-variables-in-Sed"><a href="#1-Use-Shell-variables-in-Sed" class="headerlink" title="1. Use Shell variables in Sed"></a>1. Use Shell variables in Sed</h2><p>The following command lines insert a string before the first line of file temp.txt:<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="hljs-string">'1i I want to insert a string into file temp.txt'</span></span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">but when you want to insert a longer sentence, or you want to <span class="hljs-built_in">read</span> some lines from another file, store them <span class="hljs-keyword">in</span> a Shell variable, and <span class="hljs-keyword">then</span> insert them into the targeted file, the following commands really <span class="hljs-built_in">help</span>:</span><br><span class="line">```bash	</span><br><span class="line">resids=<span class="hljs-string">"I want to insert a longer sentence, more and more...."</span></span><br><span class="line">sed <span class="hljs-string">"1i <span class="hljs-variable">$&#123;resids&#125;</span>"</span> temp.txt |less</span><br></pre></td></tr></table></figure></p>
-<p>NOTE: must use double quotes when you want to use shell variables.</p>
-<h2 id="2-Overlap-problem-when-appending-a-string-to-a-shell-variable-passed-from-awk-output"><a href="#2-Overlap-problem-when-appending-a-string-to-a-shell-variable-passed-from-awk-output" class="headerlink" title="2. Overlap problem when appending a string to a shell variable passed from awk output"></a>2. Overlap problem when appending a string to a shell variable passed from awk output</h2><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">name=$(awk <span class="hljs-string">'&#123;print $2&#125;'</span> name.txt)</span><br><span class="line"><span class="hljs-built_in">echo</span> <span class="hljs-variable">$name</span></span><br></pre></td></tr></table></figure>
-<p>the output will be:<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wbksesco</span><br></pre></td></tr></table></figure></p>
-<p>the output sees strange. Actually, there is a <code>\r</code> in each line making this strange thing happen. The solution is to use <code>sed</code> to replace <code>\r</code>:<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">name=$(awk <span class="hljs-string">'&#123;print $2&#125;'</span> name.txt |sed <span class="hljs-string">'s/\r//g)</span></span><br><span class="line"><span class="hljs-string">echo $name</span></span><br></pre></td></tr></table></figure></p>
-<p>the right output will be:<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">agr alcr altus ancr arbuck arne bbne bbr bfr bhr blr bonc boyr cane carterco cbks ccdt ccr cheney cmo cobb dane dfr eapr edne foss frr gibr gler graresco greresco guwy hbne hcne hebr hgh hsne htoothr hvr jamr jmrcadco keyr ksks kwks ler lfrm limr lmne ltr lvks mcdh mrne nasty nelr norman patr pbr pist pshr ptr puer rueresco sanford semr sharesco sher shr swtr toms trgt trne turq twiresco waks wbks</span><br></pre></td></tr></table></figure></p>
+        <h2 id="1-combine-several-figures-into-one"><a href="#1-combine-several-figures-into-one" class="headerlink" title="1. combine several figures into one"></a>1. combine several figures into one</h2><p>horizontally:<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">convert +append 1.jpg 2.jpg 3.jpg combined.jpg</span><br></pre></td></tr></table></figure></p>
+<p>vertically:<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">convert -append 1.jpg 2.jpg 3.jpg combined.jpg</span><br></pre></td></tr></table></figure></p>
 
     
 
@@ -165,11 +159,7 @@
     
     <div class="columns is-variable is-1 is-multiline is-mobile">
     
-        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Awk/">#Awk</a></span>
-    
-        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Sed/">#Sed</a></span>
-    
-        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Shell/">#Shell</a></span>
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/en/tags/ImageMagick/">#ImageMagick</a></span>
     
     </div>
     
@@ -177,12 +167,10 @@
     <div class="columns is-mobile is-multiline article-nav">
         <span class="column is-12-mobile is-half-desktop  article-nav-prev">
             
-            <a href="/2019/06/06/tool/2018-05-12-GooglePhotos/">免费无限容量的照片备份与管理:Google Photos</a>
+            <a href="/2019/06/06/en/2017-07-06-GoogleEarthEngine/">Google Earth Engine</a>
             
         </span>
-        <span class="column is-12-mobile is-half-desktop  article-nav-next">
-            
-            <a href="/2019/06/06/tool/2018-05-07-百度网盘/">百度网盘限速破解</a>
+        <span class="column is-12-mobile is-half-desktop is-hidden-mobile article-nav-next">
             
         </span>
     </div>
@@ -218,7 +206,7 @@
                 <span class="icon">
                     <i class="fas fa-globe"></i>
                 </span>
-                <span>简体中文</span>
+                <span>English</span>
                 <span class="icon is-small">
             <i class="fas fa-angle-down" aria-hidden="true"></i>
           </span>
@@ -227,11 +215,11 @@
         <div class="dropdown-menu has-text-left" role="menu">
             <div class="dropdown-content">
             
-                <a href="/2019/06/06/tool/2016-12-30-sedAwkUnixCommand/" class="dropdown-item">
+                <a href="/2019/06/06/en/2017-07-18-ImageMagick/" class="dropdown-item">
                     简体中文
                 </a>
             
-                <a href="/en/2019/06/06/tool/2016-12-30-sedAwkUnixCommand/" class="dropdown-item">
+                <a href="/en/2019/06/06/en/2017-07-18-ImageMagick/" class="dropdown-item">
                     English
                 </a>
             
@@ -268,7 +256,7 @@
     window.FontAwesomeConfig = {
         searchPseudoElements: true
     }
-    moment.locale("zh-CN");
+    moment.locale("en-AU");
 </script>
 
 
@@ -313,7 +301,7 @@
     <div class="searchbox-mask"></div>
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="站内搜索" />
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
             <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">
@@ -325,13 +313,13 @@
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: '文章',
-                PAGES: '页面',
-                CATEGORIES: '分类',
-                TAGS: '标签',
-                UNTITLED: '(无标题)',
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
             },
-            CONTENT_URL: '/content.json',
+            CONTENT_URL: '/content.en.json',
         };
         window.INSIGHT_CONFIG = INSIGHT_CONFIG;
     })(window);

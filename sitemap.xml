@@ -331,7 +331,7 @@
   </url>
   
   <url>
-    <loc>https://mengfeimu.github.io/2019/06/06/tool/2017-07-06-GoogleEarthEngine/</loc>
+    <loc>https://mengfeimu.github.io/2019/06/06/en/2017-07-06-GoogleEarthEngine/</loc>
     
     <lastmod>2019-03-08T03:01:30.000Z</lastmod>
     
@@ -415,13 +415,6 @@
   </url>
   
   <url>
-    <loc>https://mengfeimu.github.io/2019/10/24/en/2017-07-07-reading/</loc>
-    
-    <lastmod>2018-10-10T16:37:33.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://mengfeimu.github.io/2019/06/06/2017-07-07-reading/</loc>
     
     <lastmod>2018-10-10T16:37:33.000Z</lastmod>
@@ -443,41 +436,6 @@
   </url>
   
   <url>
-    <loc>https://mengfeimu.github.io/2019/06/06/music/2018-05-19-TheBeatles/</loc>
-    
-    <lastmod>2018-07-16T19:20:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mengfeimu.github.io/2019/06/06/2018-04-01-music/</loc>
-    
-    <lastmod>2018-07-16T19:20:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mengfeimu.github.io/2019/06/06/2017-06-20-movie/</loc>
-    
-    <lastmod>2018-07-16T19:20:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mengfeimu.github.io/2019/06/06/music/2018-04-01-%E5%91%A8%E6%9D%B0%E4%BC%A6/</loc>
-    
-    <lastmod>2018-07-16T19:20:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mengfeimu.github.io/2019/06/06/2018-05-01-bangbang/</loc>
-    
-    <lastmod>2018-07-16T19:20:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://mengfeimu.github.io/2019/06/06/tool/2018-05-12-GooglePhotos/</loc>
     
     <lastmod>2018-07-16T19:20:01.000Z</lastmod>
@@ -485,28 +443,7 @@
   </url>
   
   <url>
-    <loc>https://mengfeimu.github.io/2019/06/06/tool/2018-05-07-%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98/</loc>
-    
-    <lastmod>2018-07-16T19:20:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mengfeimu.github.io/2019/06/06/tool/2017-07-18-ImageMagick/</loc>
-    
-    <lastmod>2018-07-16T19:20:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mengfeimu.github.io/2019/06/06/tool/2018-04-23-chm2pdf/</loc>
-    
-    <lastmod>2018-07-16T19:20:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mengfeimu.github.io/2019/06/06/other/2018-05-29-%E5%9B%9B%E4%B8%87%E4%BA%BF%E7%9A%84%E9%80%89%E6%8B%A9/</loc>
+    <loc>https://mengfeimu.github.io/2019/06/06/music/2018-05-19-TheBeatles/</loc>
     
     <lastmod>2018-07-16T19:20:01.000Z</lastmod>
     
@@ -520,7 +457,63 @@
   </url>
   
   <url>
-    <loc>https://mengfeimu.github.io/2019/06/06/tool/2016-12-30-sedAwkUnixCommand/</loc>
+    <loc>https://mengfeimu.github.io/2019/06/06/en/2017-07-18-ImageMagick/</loc>
+    
+    <lastmod>2018-07-16T19:20:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mengfeimu.github.io/2019/06/06/tool/2018-05-07-%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98/</loc>
+    
+    <lastmod>2018-07-16T19:20:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mengfeimu.github.io/2019/06/06/en/2016-12-30-sedAwkUnixCommand/</loc>
+    
+    <lastmod>2018-07-16T19:20:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mengfeimu.github.io/2019/06/06/music/2018-04-01-%E5%91%A8%E6%9D%B0%E4%BC%A6/</loc>
+    
+    <lastmod>2018-07-16T19:20:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mengfeimu.github.io/2019/06/06/2018-04-01-music/</loc>
+    
+    <lastmod>2018-07-16T19:20:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mengfeimu.github.io/2019/06/06/tool/2018-04-23-chm2pdf/</loc>
+    
+    <lastmod>2018-07-16T19:20:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mengfeimu.github.io/2019/06/06/2017-06-20-movie/</loc>
+    
+    <lastmod>2018-07-16T19:20:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mengfeimu.github.io/2019/06/06/2018-05-01-bangbang/</loc>
+    
+    <lastmod>2018-07-16T19:20:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mengfeimu.github.io/2019/06/06/other/2018-05-29-%E5%9B%9B%E4%B8%87%E4%BA%BF%E7%9A%84%E9%80%89%E6%8B%A9/</loc>
     
     <lastmod>2018-07-16T19:20:01.000Z</lastmod>
     
