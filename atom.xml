@@ -117,16 +117,18 @@
     <link href="https://mengfeimu.github.io/2019/10/17/buckethead/"/>
     <id>https://mengfeimu.github.io/2019/10/17/buckethead/</id>
     <published>2019-10-16T21:58:16.000Z</published>
-    <updated>2019-10-22T13:35:27.000Z</updated>
+    <updated>2019-12-06T03:15:30.000Z</updated>
     
-    <content type="html"><![CDATA[<p>百度贴吧里有个帖子上传了很多Pike系列的百度云链接，大部分可用。<a href="http://tieba.baidu.com/p/2269554764?pn=1" target="_blank" rel="noopener">链接</a></p><p>帖子中大部分均已保存到自己的百度云网盘中。</p><p>另外，<a href="https://www.cdbao.net" target="_blank" rel="noopener">CD音乐包网站</a>也有帖子中有分享，为此，特注册账户（QQ邮箱）（需支付宝付15块获得邀请码）。</p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>以下仅用于试听试看，请支持正版，捍卫版权！</p></blockquote><p>百度贴吧里有个帖子上传了很多Pike系列的百度云链接，大部分可用。<a href="http://tieba.baidu.com/p/2269554764?pn=1" target="_blank" rel="noopener">链接</a></p><p>帖子中大部分均已保存到自己的百度云网盘中。</p><p>另外，<a href="https://www.cdbao.net" target="_blank" rel="noopener">CD音乐包网站</a>也有帖子中有分享，为此，特注册账户（QQ邮箱）（需支付宝付15块获得邀请码）。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;百度贴吧里有个帖子上传了很多Pike系列的百度云链接，大部分可用。&lt;a href=&quot;http://tieba.baidu.com/p/2269554764?pn=1&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;链接&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;帖子中大部分均已
+        &lt;blockquote&gt;
+&lt;p&gt;以下仅用于试听试看，请支持正版，捍卫版权！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;百度贴吧里有个帖子上传了很多Pike系列的百度云链接，大部分可用。&lt;a href=&quot;http://tieba.baidu.com/p/2269554764?pn=
       
     
     </summary>
@@ -232,17 +234,19 @@
     <link href="https://mengfeimu.github.io/2019/07/02/mathtype7/"/>
     <id>https://mengfeimu.github.io/2019/07/02/mathtype7/</id>
     <published>2019-07-01T17:03:30.000Z</published>
-    <updated>2019-08-06T08:35:03.000Z</updated>
+    <updated>2019-12-06T03:16:58.000Z</updated>
     
-    <content type="html"><![CDATA[<p>Word软件中自带的公式编辑功能已经很强大，平时写论文报告都够用，但在VISIO中画流程图时，没有比较方便的方法，于是安装MathType。</p><p>该软件收费，需要用秘钥激活，否则只能用30天使用版本。</p><p>下载MathType 7到<code>OneDrive\apps\MathType7.4.0.453</code>下，有可移动版本，无需安装和激活，直接双击<code>portable</code>文件夹下的<code>.exe</code>即可开使用（如果不成功，请先断网然后重新打开）。</p><h1 id="下载和安装："><a href="#下载和安装：" class="headerlink" title="下载和安装："></a>下载和安装：</h1><p><a href="https://cygwin.com/" target="_blank" rel="noopener">https://cygwin.com/</a>，仅仅安装了最基础的packages，vim等没有安装。</p><h1 id="安装需要的package"><a href="#安装需要的package" class="headerlink" title="安装需要的package"></a>安装需要的package</h1><p>重新运行cygwin的安装文件，选择相应的package。</p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>以下仅用于试用，请支持正版，捍卫版权！</p></blockquote><p>Word软件中自带的公式编辑功能已经很强大，平时写论文报告都够用，但在VISIO中画流程图时，没有比较方便的方法，于是安装MathType。</p><p>该软件收费，需要用秘钥激活，否则只能用30天使用版本。</p><p>下载MathType 7到<code>OneDrive\apps\MathType7.4.0.453</code>下，有可移动版本，无需安装和激活，直接双击<code>portable</code>文件夹下的<code>.exe</code>即可开使用（如果不成功，请先断网然后重新打开）。</p><h1 id="下载和安装："><a href="#下载和安装：" class="headerlink" title="下载和安装："></a>下载和安装：</h1><p><a href="https://cygwin.com/" target="_blank" rel="noopener">https://cygwin.com/</a>，仅仅安装了最基础的packages，vim等没有安装。</p><h1 id="安装需要的package"><a href="#安装需要的package" class="headerlink" title="安装需要的package"></a>安装需要的package</h1><p>重新运行cygwin的安装文件，选择相应的package。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Word软件中自带的公式编辑功能已经很强大，平时写论文报告都够用，但在VISIO中画流程图时，没有比较方便的方法，于是安装MathType。&lt;/p&gt;
-&lt;p&gt;该软件收费，需要用秘钥激活，否则只能用30天使用版本。&lt;/p&gt;
-&lt;p&gt;下载MathType 7到&lt;code&gt;OneDr
+        &lt;blockquote&gt;
+&lt;p&gt;以下仅用于试用，请支持正版，捍卫版权！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Word软件中自带的公式编辑功能已经很强大，平时写论文报告都够用，但在VISIO中画流程图时，没有比较方便的方法，于是安装MathType。&lt;/p&gt;
+&lt;p&gt;该软件收费
       
     
     </summary>
@@ -285,15 +289,18 @@
     <link href="https://mengfeimu.github.io/2019/06/13/music/%E5%85%8D%E8%B4%B9%E9%9F%B3%E4%B9%90%E7%BD%91%E7%AB%99/"/>
     <id>https://mengfeimu.github.io/2019/06/13/music/免费音乐网站/</id>
     <published>2019-06-12T17:32:15.000Z</published>
-    <updated>2019-06-14T13:35:28.000Z</updated>
+    <updated>2019-12-06T03:15:40.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="在线收听"><a href="#在线收听" class="headerlink" title="在线收听"></a>在线收听</h1><p><a href="https://music.youtube.com" target="_blank" rel="noopener">https://music.youtube.com</a></p><p><a href="https://muxiv.net" target="_blank" rel="noopener">https://muxiv.net</a> （这个好像是网易云音乐的镜像网站，但网易云中需要VIP才能听的歌这个也可以免费听。）</p><h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><p><a href="https://ifxd.bid" target="_blank" rel="noopener">iTunes分享店</a></p><p><a href="http://its-download-thing.blogspot.com" target="_blank" rel="noopener">http://its-download-thing.blogspot.com</a></p><p><a href="http://retroitunesplus.blogspot.com" target="_blank" rel="noopener">http://retroitunesplus.blogspot.com</a></p><p><a href="http://www.baiduonce.com/index.html" target="_blank" rel="noopener">http://www.baiduonce.com/index.html</a></p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>以下仅用于试听试看，请支持正版，捍卫版权！</p></blockquote><h1 id="在线收听"><a href="#在线收听" class="headerlink" title="在线收听"></a>在线收听</h1><p><a href="https://music.youtube.com" target="_blank" rel="noopener">https://music.youtube.com</a></p><p><a href="https://muxiv.net" target="_blank" rel="noopener">https://muxiv.net</a> （这个好像是网易云音乐的镜像网站，但网易云中需要VIP才能听的歌这个也可以免费听。）</p><h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><p><a href="https://ifxd.bid" target="_blank" rel="noopener">iTunes分享店</a></p><p><a href="http://its-download-thing.blogspot.com" target="_blank" rel="noopener">http://its-download-thing.blogspot.com</a></p><p><a href="http://retroitunesplus.blogspot.com" target="_blank" rel="noopener">http://retroitunesplus.blogspot.com</a></p><p><a href="http://www.baiduonce.com/index.html" target="_blank" rel="noopener">http://www.baiduonce.com/index.html</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;在线收听&quot;&gt;&lt;a href=&quot;#在线收听&quot; class=&quot;headerlink&quot; title=&quot;在线收听&quot;&gt;&lt;/a&gt;在线收听&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://music.youtube.com&quot; target=&quot;_blank&quot; rel=&quot;noope
+        &lt;blockquote&gt;
+&lt;p&gt;以下仅用于试听试看，请支持正版，捍卫版权！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;在线收听&quot;&gt;&lt;a href=&quot;#在线收听&quot; class=&quot;headerlink&quot; title=&quot;在线收听&quot;&gt;&lt;/a&gt;在线收听&lt;/h1&gt;&lt;p&gt;&lt;a hre
       
     
     </summary>
@@ -352,6 +359,28 @@
   </entry>
   
   <entry>
+    <title>Python之pandas</title>
+    <link href="https://mengfeimu.github.io/2019/06/06/tool/2018-06-14-python-pandas/"/>
+    <id>https://mengfeimu.github.io/2019/06/06/tool/2018-06-14-python-pandas/</id>
+    <published>2019-06-06T09:54:53.000Z</published>
+    <updated>2019-03-15T04:45:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>  参照<a href="https://mengfeimu.github.io/2018/01/20/python/#3-%E5%AE%89%E8%A3%85pandas">python环境搭建</a></p><h1 id="读取csv文件"><a href="#读取csv文件" class="headerlink" title="读取csv文件"></a>读取csv文件</h1>  <figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd</span><br><span class="line"><span class="hljs-comment"># delimiter = 设置间隔符</span></span><br><span class="line"><span class="hljs-comment"># names = 设置列名，适用于文件中没有列名直接是数据的情况，如果文件中已有列名，names = None</span></span><br><span class="line">cols = [<span class="hljs-string">'id'</span>, <span class="hljs-string">'lat'</span>, <span class="hljs-string">'lon'</span>, <span class="hljs-string">'vars'</span>, <span class="hljs-string">'firstY'</span>, <span class="hljs-string">'lastY'</span>]</span><br><span class="line">df   = pd.read_csv(inven_f, names=cols, delimiter=<span class="hljs-string">'\s+'</span>)</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 选取某一列或某几列</span></span><br><span class="line">df[<span class="hljs-string">'vars'</span>]</span><br><span class="line">df[[<span class="hljs-string">'id'</span>, <span class="hljs-string">'vars'</span>]]</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 按某一列排序</span></span><br><span class="line">df.sort_values(by = <span class="hljs-string">'var'</span>, ascending=<span class="hljs-keyword">True</span>) <span class="hljs-comment"># 升序</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 按条件筛选</span></span><br><span class="line">df[df.lat &gt; <span class="hljs-number">60</span>]</span><br><span class="line">df[df[<span class="hljs-string">'lat'</span>] &gt; <span class="hljs-number">60</span>]</span><br><span class="line">df[df[<span class="hljs-string">'vars'</span>] == <span class="hljs-string">'TMAX'</span>]</span><br><span class="line"><span class="hljs-comment"># df[df.var == 'TMAX'] # 错误用法, 原因是var是pandas的保留字段，不要用var作为列名，改为vars之后就可以了</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 多条件筛选 isin()</span></span><br><span class="line"><span class="hljs-comment"># 'vars' == 列表中之一</span></span><br><span class="line">df[df.vars.isin([<span class="hljs-string">'ACMC'</span>,<span class="hljs-string">'ACMH'</span>,<span class="hljs-string">'ACSC'</span>,<span class="hljs-string">'ACSH'</span>])]</span><br><span class="line">df[df[<span class="hljs-string">'vars'</span>].isin([<span class="hljs-string">'ACMC'</span>,<span class="hljs-string">'ACMH'</span>,<span class="hljs-string">'ACSC'</span>,<span class="hljs-string">'ACSH'</span>])]</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 筛选某列中包含某个字符片段的行</span></span><br><span class="line">df[df.id.str.contains(<span class="hljs-string">'US'</span>)]</span><br><span class="line"><span class="hljs-comment">## 以某个字符片段开头的行</span></span><br><span class="line">df[df.id.str.startswith(<span class="hljs-string">'US'</span>)]</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 查看不重复的值</span></span><br><span class="line">sorted(df.vars.unique())</span><br></pre></td></tr></table></figure><h1 id="resample-和-groupby"><a href="#resample-和-groupby" class="headerlink" title="resample 和 groupby"></a>resample 和 groupby</h1><p>小时数据求日平均值，即数据重采样，用<code>resample</code>：</p><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df.resample(<span class="hljs-string">'D'</span>).mean().plot()</span><br><span class="line"><span class="hljs-comment"># 若需要求月平均值，则用'M'，年平均值，用'Y'，三小时平均值'3H'。</span></span><br></pre></td></tr></table></figure><p><img src="/pics/pandas_resample.png" alt="pandas_resample.png"></p><p>求多年月平均值，则需要用groupby：</p><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df1 = df.groupby(by=df.index.month).mean().plot()</span><br></pre></td></tr></table></figure><p><img src="/pics/pandas_groupby.png" alt="pandas_groupby.png"></p><p>从这张两图即可看出resample和groupby的区别。</p>]]></content>
+    
+    <summary type="html">
+    
+      python pandas
+    
+    </summary>
+    
+      <category term="工具" scheme="https://mengfeimu.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="python" scheme="https://mengfeimu.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Git工具安装与使用</title>
     <link href="https://mengfeimu.github.io/2019/06/06/tool/2018-07-27-git/"/>
     <id>https://mengfeimu.github.io/2019/06/06/tool/2018-07-27-git/</id>
@@ -374,24 +403,24 @@
   </entry>
   
   <entry>
-    <title>Python之pandas</title>
-    <link href="https://mengfeimu.github.io/2019/06/06/tool/2018-06-14-python-pandas/"/>
-    <id>https://mengfeimu.github.io/2019/06/06/tool/2018-06-14-python-pandas/</id>
-    <published>2019-06-06T09:54:53.000Z</published>
-    <updated>2019-03-15T04:45:49.000Z</updated>
+    <title>免费无限容量的照片备份与管理:Google Photos</title>
+    <link href="https://mengfeimu.github.io/2019/06/06/tool/2018-05-12-GooglePhotos/"/>
+    <id>https://mengfeimu.github.io/2019/06/06/tool/2018-05-12-GooglePhotos/</id>
+    <published>2019-06-06T09:54:52.000Z</published>
+    <updated>2018-07-16T19:20:01.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>  参照<a href="https://mengfeimu.github.io/2018/01/20/python/#3-%E5%AE%89%E8%A3%85pandas">python环境搭建</a></p><h1 id="读取csv文件"><a href="#读取csv文件" class="headerlink" title="读取csv文件"></a>读取csv文件</h1>  <figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd</span><br><span class="line"><span class="hljs-comment"># delimiter = 设置间隔符</span></span><br><span class="line"><span class="hljs-comment"># names = 设置列名，适用于文件中没有列名直接是数据的情况，如果文件中已有列名，names = None</span></span><br><span class="line">cols = [<span class="hljs-string">'id'</span>, <span class="hljs-string">'lat'</span>, <span class="hljs-string">'lon'</span>, <span class="hljs-string">'vars'</span>, <span class="hljs-string">'firstY'</span>, <span class="hljs-string">'lastY'</span>]</span><br><span class="line">df   = pd.read_csv(inven_f, names=cols, delimiter=<span class="hljs-string">'\s+'</span>)</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 选取某一列或某几列</span></span><br><span class="line">df[<span class="hljs-string">'vars'</span>]</span><br><span class="line">df[[<span class="hljs-string">'id'</span>, <span class="hljs-string">'vars'</span>]]</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 按某一列排序</span></span><br><span class="line">df.sort_values(by = <span class="hljs-string">'var'</span>, ascending=<span class="hljs-keyword">True</span>) <span class="hljs-comment"># 升序</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 按条件筛选</span></span><br><span class="line">df[df.lat &gt; <span class="hljs-number">60</span>]</span><br><span class="line">df[df[<span class="hljs-string">'lat'</span>] &gt; <span class="hljs-number">60</span>]</span><br><span class="line">df[df[<span class="hljs-string">'vars'</span>] == <span class="hljs-string">'TMAX'</span>]</span><br><span class="line"><span class="hljs-comment"># df[df.var == 'TMAX'] # 错误用法, 原因是var是pandas的保留字段，不要用var作为列名，改为vars之后就可以了</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 多条件筛选 isin()</span></span><br><span class="line"><span class="hljs-comment"># 'vars' == 列表中之一</span></span><br><span class="line">df[df.vars.isin([<span class="hljs-string">'ACMC'</span>,<span class="hljs-string">'ACMH'</span>,<span class="hljs-string">'ACSC'</span>,<span class="hljs-string">'ACSH'</span>])]</span><br><span class="line">df[df[<span class="hljs-string">'vars'</span>].isin([<span class="hljs-string">'ACMC'</span>,<span class="hljs-string">'ACMH'</span>,<span class="hljs-string">'ACSC'</span>,<span class="hljs-string">'ACSH'</span>])]</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 筛选某列中包含某个字符片段的行</span></span><br><span class="line">df[df.id.str.contains(<span class="hljs-string">'US'</span>)]</span><br><span class="line"><span class="hljs-comment">## 以某个字符片段开头的行</span></span><br><span class="line">df[df.id.str.startswith(<span class="hljs-string">'US'</span>)]</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 查看不重复的值</span></span><br><span class="line">sorted(df.vars.unique())</span><br></pre></td></tr></table></figure><h1 id="resample-和-groupby"><a href="#resample-和-groupby" class="headerlink" title="resample 和 groupby"></a>resample 和 groupby</h1><p>小时数据求日平均值，即数据重采样，用<code>resample</code>：</p><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df.resample(<span class="hljs-string">'D'</span>).mean().plot()</span><br><span class="line"><span class="hljs-comment"># 若需要求月平均值，则用'M'，年平均值，用'Y'，三小时平均值'3H'。</span></span><br></pre></td></tr></table></figure><p><img src="/pics/pandas_resample.png" alt="pandas_resample.png"></p><p>求多年月平均值，则需要用groupby：</p><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df1 = df.groupby(by=df.index.month).mean().plot()</span><br></pre></td></tr></table></figure><p><img src="/pics/pandas_groupby.png" alt="pandas_groupby.png"></p><p>从这张两图即可看出resample和groupby的区别。</p>]]></content>
+    <content type="html"><![CDATA[<p>这两天Google I/O大会，看到了关于Google Photos的新闻，好像是以前就有的产品，现在更加强大。最大的卖点就是可以无限备份手机或者电脑上的照片和视频，只要你能接受最大清晰度16MP以下，也就是说几乎所有的手机拍的都可以在损失一点点清晰度的情况下上传到这里，而且是免费的、无限容量的。知乎上有很多关于安全性的讨论。对于我来讲，应该会把非私人的照片、风景照等放在上面，反正是无关紧要的东西，个人照片还是要单独本地备份的。</p><p>突然想到还可以用这家伙来做一个免费的图床，插入到博客链接中，在电脑上看清晰度很可以。</p><ul><li><p>测试Google Photos图床功能（用iPhone 8 Plus拍摄 20180425）</p><p><img src="https://lh3.googleusercontent.com/xWTz0QdPjgh5ifyQxWP2Q-XKiGOjBz_-AWE9AB7XGr0wZVXjVrBchzdjbfcWASJnQ_Reayio2Y8IyrA19sXx25cJvebbixdoB9tTaXdAOxMQWUS06uXcaQ6FFD7BmTR01x8-FS8WXvEjMzUJ2ycLvb5LrPiOPnQ4lYCakqcseNe4Ik1g0xnuurKnhsrEsg0Z0K0GIki-neJlhpAWTi1_knOvZ4v8jE076047RID1W615lIISIBFfD85XBbmbo-QhC4H4vPlqYsQmJur2yXA62YueCBq7FIE6Aterb1gwdYEduafJXQ1EI_8HwOg6io79pA-ZnbTIGvzgtaFXaniU-XIrGL6BKqfGaGnYAlntDlwTqljLoM0D2ny-pYquU47gBHVpkpg5UICT2C62S74IRg_eUjdZfEtmAudGAvnsB5LxrnMuQJjrzQcmw8y9UT4fp_wtj1a1po9y2XZFyN7dj8Mef1rusU4wSiPP5KQjZhSqVUn7nTlbnppOB5f5RsOqZEFb5bswT6EgXDEZuEtk1rERRjHDGYgLouI9PWkbSM4qZO1hrwkdV8zdf3HRhsU8haN0L8l1GoLz7pCv5Q-mce8ssfHTjtJ5FzU0T2s=w2006-h1504-no" alt="香槟体育馆"></p></li></ul><p>更让我惊喜的是，上传了照片之后，会有自动推荐的滤镜效果，比自己动手美化的效果还要好，简直是黑科技。来看看这惊艳的效果：</p><ul><li><p>原图</p><p><img src="https://lh3.googleusercontent.com/VJRt4hJPtdQKmVAItIi5uVqgv3c5FnK69z2GWLnOBxwDQ2OAuRkFyNedhwc-BiG-zJHJWuohneD4pH_ctSHJP8eT0_vdeS5i5vCVdCqZ6VbpkCQ9qOcXJx_f-KxntD15GzZxryTJaBZd46qVwEjJnMZvScr1pxx1QE2Ha0Z87E9kmrCvytpL7QIlQvGuMzzYa5scaTSFQfGZyspfHNHilAV8QC5hqphW92c7rVirA2of0vqTBCLptChqkL5yoaVxolO_uXn0UDvTN6FCc7nOKVuZwMkFMHQSl6UWUwFtm85zdquXqu2Y0fh9uHrGizXLO-lqjoceoJfGl7EVuVOhEbldVSdfFy6K-PrTZ8m9flkOqEAZjk6Ly1YyAvfbehGya5Vivm-LxZHQI9KLaWfGcJm6xv04n5J_XnguidF96qWVbbSKBzsi8sLc8Z4g5iX6Wzspcm1tFr6uRTSO9Jmo_CDYl9kWzeW0aLCmqLlOHtyNlfUFrXqRD9Z9zthxpR0JsdB2CSX630kRNSlRXkR0-NXe7drPWDzsTZSsTzoym8WFwt9sYD9oc5upaPO5NTfoF6Mtc2vszptXxgtCnJ8PRFWAdv96NwMdi0oZy7c=w2000-h1506-no" alt="新奥尔良杰克逊广场"></p><p><img src="https://lh3.googleusercontent.com/tCK82e71gJ16P2JAJ3hoVy5RU_2AJdujMR3xSsNxkkf7RSdp_8aPvr2pEsTqNE1WA4ts5dIx5PR5SHJv4sJVvDaR5zKp9sZqYMfeF_zjCGorRMXV91ThqamWDxEXzxBZwmDCh-qJV8IfeX3DdpPSsc24QZMwQJvXEvrDVCwF0hDNkRXIdSs-y_zKeTzXCwvVIjhuIkseXJR722oDUHkmWiH7ykxMhbzmMIcjHFWn9wbHS6m508PcMEwKJ0sP8lbQnSeIo6NTVqhn1saj74-opID2QuYOTD_-ETNm00brbitoX5y9AtzNjTptItU1NlMv6Uvd7ej6t5I1lE3yS1kpmW41JXwJ0-flmjlrFhVGXzn1g5TOuiWd1GafNsq2czptD406YC5zaIHdNN-dtexNx7ry5YzncRd0oKVaRCwvMyDUsbPNoFYkOn1plGGJ-_HeXSNtwocUaVKwYb5qzFhuIUliCf9zHazRVfU-Ah6jMnUyYvXOXvaE9TwTBHCY2GMAMt22DKeXtdI_-cTOzyDIn3rte93VKKWtvgMNq2k-2eX0a3z1befyynwnV0pX_4qIURjftXPSp2KZSI0snrP8Ubvr8uGOVM5hLYUHe_0=w2006-h1504-no" alt="UIUC大雪"></p><p><img src="https://lh3.googleusercontent.com/FCHoZ6fV29MtH5ZWEV0sWW3WfeATTMtKcuJVLK7JGdCMR2-SxRpocenEwFTZu5FAtFqWwepeZHhfgus61kfE9swa3LzRRpWt-12bgQnPiiA49damVyZNK-q7ooWU6FlCpAY5UhC9oRoG04m8LiIKzVydrOk9Z6ug6I84TUBwSp0dF_rtkPplXnHjxOUr_r6ngC_9Wejjfap2ph7hcKRQyajwppE6WfFLiRnnrzEz4l7XrdVxoWSB-zhfTOMOz4hUlAgB6rtY1jMJuwLwNmYtmqzG6n8EuTKZ1P0m4LBe0DTavJlxUdGfaENw_9Yc1f7KxBiPIQ90OzKy49YpHvUEuKgWXprcBO3ZklzYolYiGgTC5NdumcWBtFXl-bDrD6h4kSDP7Uzz1SAhKNsjW6B8hnS8Ge0JUpBLyU4mOYKBHmqS2ei2AdzpJvUqD7_v4csqPkmlRjmre7bK8N20P_h7ShToWLZPyNCjHI4QzVKUdgyLhgG4_ECYfTJvzuUgpKoHUdrEiiU8FVToLB-zEEw8g6nX7oPz_w3vqw3fBC6dMHBl2mJkA-v90m_O5xz3N3H3jtIl-J9K4L4JeHIZ3cA-mY6KKnjtV85CfbsU4Rk=w2006-h1504-no" alt=""></p><p>​</p></li><li><p>Google Photos自动推荐的滤镜</p><p><img src="https://lh3.googleusercontent.com/pKukXOmK9Hat_B62uFCp6hONOGWDK1K8gvvMmZdKwazM7jIaJC5sKOjXrlrXVbOL6p0Eb4nkK7kDBunNPuqAB8-_cRBRuY-cfaHiJJaASvR7bUl9Xw7IOhWgzHM2cbR-LYB_FREMHlk3gCOU50Gl9a0nWzQDZb08B-czo-8-JU-OgK4p6TuDVpe2R8BbkgjCbJcFxiMhk_GNz-XcQYILhoQwDyLxh4MFxVHnZSQhLF3tK60R84iG0poc05QaIW_KQYz9Hjc6MY3bUqybkuFomGh79uIV3mj03h5lB34uLGgSr9cgRC2-JLkimCfqfLr-E5weyOr4mcH8uwr4IdgWI4pnH9SeUzINFxqPs87MpSSSTFEmJP3gNX57BcbUEVLWuIJ9likBJ3a-U33j-TtxcGmhFIfMzivWmT-K-JgQnLCPE76c-dLnyaeLXhPVSYUBN1i2dBWkuNIN6LrpNkWZNMN6Beq4vAuf5D2X8aXmg_4JcfFMnb32l6bULN9_neRIKF9C7LKa-iGVFLAD8WK_0Zz9fg15p9iuXVJDeYylQJpJJYfBhLD2IjeGyjkL_hasQlsvChNAjZSyX7_HhRsTkcJ3BLt_jHo8C4xh8zE=w2000-h1506-no" alt="新奥尔良杰克逊广场"></p><p><img src="https://lh3.googleusercontent.com/r0GDlXvFUEyX4ZPMCBQFzj9Cwf_D2lNway0VWt5nCqOBkf4c0cK2jBvprnwTwPTe_ntFWTAXW57nJILhnRsWlDmvGQD4QGaSupW_rUuj1LVMot66qTx5GvDSLa0CzsP05s6faMnnEgRi9W92If-suNNVywCUUQGpC5v9NOvG7pVHf75v2Fd5K0VOcEwCP1Rq6W_STqzgSYKJi4NGptr7RhsL544RQ72J96AL85lvb4mVgQABFiZuWprZj8iuurY_8XR2Hx0ENzo9KDA5ylYF-bR7HzeQpGAj08HKPym8eHXIO3fD1HxGWP1XnfYWoSOGOqfCAs1BSVubjUz-FnJ73_ykFQWdPF58cj2EzPqpTDKMLA2ML4267JHTonsxAJ8RticYZ1tbn6hmVM_WWn3FZoKM7x5wvab-zTXaXoJnekvD4EsJkCc6hWVUvuwZXIvvZVFmA32XELh586bNZpwwwEhz3WqBQsTGEelqjJly_UxhGEqh2RSCPvgdHFWrNuijSPWhxeMafkiwije_MifKDt5IYuhXgtbPI9XXygjP_0YfllBED8IaAu93p30qKD8BzS18trX4HQilALJs5UCn46oFmbdn6QMZDGNKLw8=w2006-h1504-no" alt="UIUC大雪"></p><p><img src="https://lh3.googleusercontent.com/JxbP1BDjM37Gn_lAl2eJug7gOQWoI2Kxkb1Cygdz8MiXBNx5qw0frSaDCKH3W3blejlA2kIl2xUkiCaYehqafIaa94ivgWFemJu1ICEaBVpsUqktC9h0cDMOefBmP6Eggb4hxQsvvwm_vRH2PqQ-hgu8Nvhqhx0fPjQHo_lpDa4W6U9A9FArhWjXNG4oXABwKWxeJBMuPeEDCGktJpXf3QSuFcGCTm-cWQ9_lkSvddB1ab015NbG-sWVNmXt_mS729AvzTh1Byq6r1FtdalEdZllSJP0jyj4DGWnrFLcFrGsj0s1cP7VhBxEH5wKFXFcf_hnYsWh7ucFM9NA2YtqXa1mq1t129qWkKztEfXmTRMSDEIowb8AHdGkNvKj9RenfIzJAjX6eHI569gIqDmzHUGRRMu4v6gw3M-SBj7SdzGDZoQ6tEJfioRzaCRMNoMrxHysRlZWSJp7r1YmDwfZ47FLhLmOVCd6V0R8ptp1kznGmak6pXvQukarodrEddgzfSObg1t8jp3kvOxF3ayQ9FBEbzUx31j2pDlZO5FcgsVnhp-IVjyj8CVrfJSfQ_iyHbROeBRnQ6OhAIlEhv1R8dD34tA_gwW7Yz6yjvI=w2006-h1504-no" alt=""></p></li></ul><p>当然，Google Photos最厉害的还是照片管理功能，它可以提供时间线管理，自动按拍照地点进行分类，进行人脸识别，你可以直接搜索某个地点、某个人、甚至是某个东西，比如搜索“汽车”，必会得到所有含有汽车的图片。虽然这些功能其他产品也有，比如Apple家的Photos，但是谷歌这次真的是非常有诚意的整合了如此多的功能，而且还免费，是非常值得试用的一款产品。</p><p>当然，本地备份还是一直要有的。</p>]]></content>
     
     <summary type="html">
     
-      python pandas
+      免费照片备份
     
     </summary>
     
       <category term="工具" scheme="https://mengfeimu.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="python" scheme="https://mengfeimu.github.io/tags/python/"/>
+      <category term="Google" scheme="https://mengfeimu.github.io/tags/Google/"/>
     
   </entry>
   
@@ -418,34 +447,24 @@
   </entry>
   
   <entry>
-    <title>Sed &amp; Awk Commands</title>
-    <link href="https://mengfeimu.github.io/2019/06/06/en/2016-12-30-sedAwkUnixCommand/"/>
-    <id>https://mengfeimu.github.io/2019/06/06/en/2016-12-30-sedAwkUnixCommand/</id>
+    <title>百度网盘限速破解</title>
+    <link href="https://mengfeimu.github.io/2019/06/06/tool/2018-05-07-%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98/"/>
+    <id>https://mengfeimu.github.io/2019/06/06/tool/2018-05-07-百度网盘/</id>
     <published>2019-06-06T09:54:52.000Z</published>
     <updated>2018-07-16T19:20:01.000Z</updated>
     
-    <content type="html"><![CDATA[<ul><li>content<br>{:toc}</li></ul><p><em>Sed and Awk are two powerful tools to manipulate text formatted files on Unix/Linux.<br>This is not a tutorial but some real codes applied in my research.<br>For basic introduction and syntax, please go to<br><a href="https://www.tutorialspoint.com/sed/" target="_blank" rel="noopener">Sed</a> or<br><a href="https://www.tutorialspoint.com/awk/" target="_blank" rel="noopener">Awk</a>.</em> </p><h2 id="1-Use-Shell-variables-in-Sed"><a href="#1-Use-Shell-variables-in-Sed" class="headerlink" title="1. Use Shell variables in Sed"></a>1. Use Shell variables in Sed</h2><p>The following command lines insert a string before the first line of file temp.txt:<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="hljs-string">'1i I want to insert a string into file temp.txt'</span></span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">but when you want to insert a longer sentence, or you want to <span class="hljs-built_in">read</span> some lines from another file, store them <span class="hljs-keyword">in</span> a Shell variable, and <span class="hljs-keyword">then</span> insert them into the targeted file, the following commands really <span class="hljs-built_in">help</span>:</span><br><span class="line">```bash</span><br><span class="line">resids=<span class="hljs-string">"I want to insert a longer sentence, more and more...."</span></span><br><span class="line">sed <span class="hljs-string">"1i <span class="hljs-variable">$&#123;resids&#125;</span>"</span> temp.txt |less</span><br></pre></td></tr></table></figure></p><p>NOTE: must use double quotes when you want to use shell variables.</p><h2 id="2-Overlap-problem-when-appending-a-string-to-a-shell-variable-passed-from-awk-output"><a href="#2-Overlap-problem-when-appending-a-string-to-a-shell-variable-passed-from-awk-output" class="headerlink" title="2. Overlap problem when appending a string to a shell variable passed from awk output"></a>2. Overlap problem when appending a string to a shell variable passed from awk output</h2><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">name=$(awk <span class="hljs-string">'&#123;print $2&#125;'</span> name.txt)</span><br><span class="line"><span class="hljs-built_in">echo</span> <span class="hljs-variable">$name</span></span><br></pre></td></tr></table></figure><p>the output will be:<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wbksesco</span><br></pre></td></tr></table></figure></p><p>the output sees strange. Actually, there is a <code>\r</code> in each line making this strange thing happen. The solution is to use <code>sed</code> to replace <code>\r</code>:<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">name=$(awk <span class="hljs-string">'&#123;print $2&#125;'</span> name.txt |sed <span class="hljs-string">'s/\r//g)</span></span><br><span class="line"><span class="hljs-string">echo $name</span></span><br></pre></td></tr></table></figure></p><p>the right output will be:<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">agr alcr altus ancr arbuck arne bbne bbr bfr bhr blr bonc boyr cane carterco cbks ccdt ccr cheney cmo cobb dane dfr eapr edne foss frr gibr gler graresco greresco guwy hbne hcne hebr hgh hsne htoothr hvr jamr jmrcadco keyr ksks kwks ler lfrm limr lmne ltr lvks mcdh mrne nasty nelr norman patr pbr pist pshr ptr puer rueresco sanford semr sharesco sher shr swtr toms trgt trne turq twiresco waks wbks</span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<p>百度网盘下载限速很严重，逼人付钱成为会员的节奏。Github上有个开源项目破解了macOS版本的限速：<a href="https://github.com/CodeTips/BaiduNetdiskPlugin-macOS" target="_blank" rel="noopener"><strong>BaiduNetdiskPlugin-macOS</strong></a></p><p>在终端命令工具Terminal中输入：</p><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">cd</span> ~/Downloads &amp;&amp; git <span class="hljs-built_in">clone</span> https://github.com/CodeTips/BaiduNetdiskPlugin-macOS.git &amp;&amp; ./BaiduNetdiskPlugin-macOS/Other/Install.sh</span><br></pre></td></tr></table></figure><p>前提是需要安装git工具，若没有安装请自行百度。</p><p>安装成功后显示SVIP到2028年。这个只是在客户端更改的假VIP权限，登陆网页版或者其他平台的百度网盘依然是普通注册会员。</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;ul&gt;
-&lt;li&gt;content&lt;br&gt;{:toc}&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Sed and Awk are two powerful tools to manipulate text formatted files on Unix/Linux.&lt;br&gt;This is
-      
+      macOS版本百度网盘限速破解
     
     </summary>
     
       <category term="工具" scheme="https://mengfeimu.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="Awk" scheme="https://mengfeimu.github.io/tags/Awk/"/>
-    
-      <category term="Sed" scheme="https://mengfeimu.github.io/tags/Sed/"/>
-    
-      <category term="Shell" scheme="https://mengfeimu.github.io/tags/Shell/"/>
+      <category term="破解" scheme="https://mengfeimu.github.io/tags/%E7%A0%B4%E8%A7%A3/"/>
     
   </entry>
   
@@ -468,28 +487,6 @@
     
     
       <category term="pdf" scheme="https://mengfeimu.github.io/tags/pdf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>免费无限容量的照片备份与管理:Google Photos</title>
-    <link href="https://mengfeimu.github.io/2019/06/06/tool/2018-05-12-GooglePhotos/"/>
-    <id>https://mengfeimu.github.io/2019/06/06/tool/2018-05-12-GooglePhotos/</id>
-    <published>2019-06-06T09:54:52.000Z</published>
-    <updated>2018-07-16T19:20:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>这两天Google I/O大会，看到了关于Google Photos的新闻，好像是以前就有的产品，现在更加强大。最大的卖点就是可以无限备份手机或者电脑上的照片和视频，只要你能接受最大清晰度16MP以下，也就是说几乎所有的手机拍的都可以在损失一点点清晰度的情况下上传到这里，而且是免费的、无限容量的。知乎上有很多关于安全性的讨论。对于我来讲，应该会把非私人的照片、风景照等放在上面，反正是无关紧要的东西，个人照片还是要单独本地备份的。</p><p>突然想到还可以用这家伙来做一个免费的图床，插入到博客链接中，在电脑上看清晰度很可以。</p><ul><li><p>测试Google Photos图床功能（用iPhone 8 Plus拍摄 20180425）</p><p><img src="https://lh3.googleusercontent.com/xWTz0QdPjgh5ifyQxWP2Q-XKiGOjBz_-AWE9AB7XGr0wZVXjVrBchzdjbfcWASJnQ_Reayio2Y8IyrA19sXx25cJvebbixdoB9tTaXdAOxMQWUS06uXcaQ6FFD7BmTR01x8-FS8WXvEjMzUJ2ycLvb5LrPiOPnQ4lYCakqcseNe4Ik1g0xnuurKnhsrEsg0Z0K0GIki-neJlhpAWTi1_knOvZ4v8jE076047RID1W615lIISIBFfD85XBbmbo-QhC4H4vPlqYsQmJur2yXA62YueCBq7FIE6Aterb1gwdYEduafJXQ1EI_8HwOg6io79pA-ZnbTIGvzgtaFXaniU-XIrGL6BKqfGaGnYAlntDlwTqljLoM0D2ny-pYquU47gBHVpkpg5UICT2C62S74IRg_eUjdZfEtmAudGAvnsB5LxrnMuQJjrzQcmw8y9UT4fp_wtj1a1po9y2XZFyN7dj8Mef1rusU4wSiPP5KQjZhSqVUn7nTlbnppOB5f5RsOqZEFb5bswT6EgXDEZuEtk1rERRjHDGYgLouI9PWkbSM4qZO1hrwkdV8zdf3HRhsU8haN0L8l1GoLz7pCv5Q-mce8ssfHTjtJ5FzU0T2s=w2006-h1504-no" alt="香槟体育馆"></p></li></ul><p>更让我惊喜的是，上传了照片之后，会有自动推荐的滤镜效果，比自己动手美化的效果还要好，简直是黑科技。来看看这惊艳的效果：</p><ul><li><p>原图</p><p><img src="https://lh3.googleusercontent.com/VJRt4hJPtdQKmVAItIi5uVqgv3c5FnK69z2GWLnOBxwDQ2OAuRkFyNedhwc-BiG-zJHJWuohneD4pH_ctSHJP8eT0_vdeS5i5vCVdCqZ6VbpkCQ9qOcXJx_f-KxntD15GzZxryTJaBZd46qVwEjJnMZvScr1pxx1QE2Ha0Z87E9kmrCvytpL7QIlQvGuMzzYa5scaTSFQfGZyspfHNHilAV8QC5hqphW92c7rVirA2of0vqTBCLptChqkL5yoaVxolO_uXn0UDvTN6FCc7nOKVuZwMkFMHQSl6UWUwFtm85zdquXqu2Y0fh9uHrGizXLO-lqjoceoJfGl7EVuVOhEbldVSdfFy6K-PrTZ8m9flkOqEAZjk6Ly1YyAvfbehGya5Vivm-LxZHQI9KLaWfGcJm6xv04n5J_XnguidF96qWVbbSKBzsi8sLc8Z4g5iX6Wzspcm1tFr6uRTSO9Jmo_CDYl9kWzeW0aLCmqLlOHtyNlfUFrXqRD9Z9zthxpR0JsdB2CSX630kRNSlRXkR0-NXe7drPWDzsTZSsTzoym8WFwt9sYD9oc5upaPO5NTfoF6Mtc2vszptXxgtCnJ8PRFWAdv96NwMdi0oZy7c=w2000-h1506-no" alt="新奥尔良杰克逊广场"></p><p><img src="https://lh3.googleusercontent.com/tCK82e71gJ16P2JAJ3hoVy5RU_2AJdujMR3xSsNxkkf7RSdp_8aPvr2pEsTqNE1WA4ts5dIx5PR5SHJv4sJVvDaR5zKp9sZqYMfeF_zjCGorRMXV91ThqamWDxEXzxBZwmDCh-qJV8IfeX3DdpPSsc24QZMwQJvXEvrDVCwF0hDNkRXIdSs-y_zKeTzXCwvVIjhuIkseXJR722oDUHkmWiH7ykxMhbzmMIcjHFWn9wbHS6m508PcMEwKJ0sP8lbQnSeIo6NTVqhn1saj74-opID2QuYOTD_-ETNm00brbitoX5y9AtzNjTptItU1NlMv6Uvd7ej6t5I1lE3yS1kpmW41JXwJ0-flmjlrFhVGXzn1g5TOuiWd1GafNsq2czptD406YC5zaIHdNN-dtexNx7ry5YzncRd0oKVaRCwvMyDUsbPNoFYkOn1plGGJ-_HeXSNtwocUaVKwYb5qzFhuIUliCf9zHazRVfU-Ah6jMnUyYvXOXvaE9TwTBHCY2GMAMt22DKeXtdI_-cTOzyDIn3rte93VKKWtvgMNq2k-2eX0a3z1befyynwnV0pX_4qIURjftXPSp2KZSI0snrP8Ubvr8uGOVM5hLYUHe_0=w2006-h1504-no" alt="UIUC大雪"></p><p><img src="https://lh3.googleusercontent.com/FCHoZ6fV29MtH5ZWEV0sWW3WfeATTMtKcuJVLK7JGdCMR2-SxRpocenEwFTZu5FAtFqWwepeZHhfgus61kfE9swa3LzRRpWt-12bgQnPiiA49damVyZNK-q7ooWU6FlCpAY5UhC9oRoG04m8LiIKzVydrOk9Z6ug6I84TUBwSp0dF_rtkPplXnHjxOUr_r6ngC_9Wejjfap2ph7hcKRQyajwppE6WfFLiRnnrzEz4l7XrdVxoWSB-zhfTOMOz4hUlAgB6rtY1jMJuwLwNmYtmqzG6n8EuTKZ1P0m4LBe0DTavJlxUdGfaENw_9Yc1f7KxBiPIQ90OzKy49YpHvUEuKgWXprcBO3ZklzYolYiGgTC5NdumcWBtFXl-bDrD6h4kSDP7Uzz1SAhKNsjW6B8hnS8Ge0JUpBLyU4mOYKBHmqS2ei2AdzpJvUqD7_v4csqPkmlRjmre7bK8N20P_h7ShToWLZPyNCjHI4QzVKUdgyLhgG4_ECYfTJvzuUgpKoHUdrEiiU8FVToLB-zEEw8g6nX7oPz_w3vqw3fBC6dMHBl2mJkA-v90m_O5xz3N3H3jtIl-J9K4L4JeHIZ3cA-mY6KKnjtV85CfbsU4Rk=w2006-h1504-no" alt=""></p><p>​</p></li><li><p>Google Photos自动推荐的滤镜</p><p><img src="https://lh3.googleusercontent.com/pKukXOmK9Hat_B62uFCp6hONOGWDK1K8gvvMmZdKwazM7jIaJC5sKOjXrlrXVbOL6p0Eb4nkK7kDBunNPuqAB8-_cRBRuY-cfaHiJJaASvR7bUl9Xw7IOhWgzHM2cbR-LYB_FREMHlk3gCOU50Gl9a0nWzQDZb08B-czo-8-JU-OgK4p6TuDVpe2R8BbkgjCbJcFxiMhk_GNz-XcQYILhoQwDyLxh4MFxVHnZSQhLF3tK60R84iG0poc05QaIW_KQYz9Hjc6MY3bUqybkuFomGh79uIV3mj03h5lB34uLGgSr9cgRC2-JLkimCfqfLr-E5weyOr4mcH8uwr4IdgWI4pnH9SeUzINFxqPs87MpSSSTFEmJP3gNX57BcbUEVLWuIJ9likBJ3a-U33j-TtxcGmhFIfMzivWmT-K-JgQnLCPE76c-dLnyaeLXhPVSYUBN1i2dBWkuNIN6LrpNkWZNMN6Beq4vAuf5D2X8aXmg_4JcfFMnb32l6bULN9_neRIKF9C7LKa-iGVFLAD8WK_0Zz9fg15p9iuXVJDeYylQJpJJYfBhLD2IjeGyjkL_hasQlsvChNAjZSyX7_HhRsTkcJ3BLt_jHo8C4xh8zE=w2000-h1506-no" alt="新奥尔良杰克逊广场"></p><p><img src="https://lh3.googleusercontent.com/r0GDlXvFUEyX4ZPMCBQFzj9Cwf_D2lNway0VWt5nCqOBkf4c0cK2jBvprnwTwPTe_ntFWTAXW57nJILhnRsWlDmvGQD4QGaSupW_rUuj1LVMot66qTx5GvDSLa0CzsP05s6faMnnEgRi9W92If-suNNVywCUUQGpC5v9NOvG7pVHf75v2Fd5K0VOcEwCP1Rq6W_STqzgSYKJi4NGptr7RhsL544RQ72J96AL85lvb4mVgQABFiZuWprZj8iuurY_8XR2Hx0ENzo9KDA5ylYF-bR7HzeQpGAj08HKPym8eHXIO3fD1HxGWP1XnfYWoSOGOqfCAs1BSVubjUz-FnJ73_ykFQWdPF58cj2EzPqpTDKMLA2ML4267JHTonsxAJ8RticYZ1tbn6hmVM_WWn3FZoKM7x5wvab-zTXaXoJnekvD4EsJkCc6hWVUvuwZXIvvZVFmA32XELh586bNZpwwwEhz3WqBQsTGEelqjJly_UxhGEqh2RSCPvgdHFWrNuijSPWhxeMafkiwije_MifKDt5IYuhXgtbPI9XXygjP_0YfllBED8IaAu93p30qKD8BzS18trX4HQilALJs5UCn46oFmbdn6QMZDGNKLw8=w2006-h1504-no" alt="UIUC大雪"></p><p><img src="https://lh3.googleusercontent.com/JxbP1BDjM37Gn_lAl2eJug7gOQWoI2Kxkb1Cygdz8MiXBNx5qw0frSaDCKH3W3blejlA2kIl2xUkiCaYehqafIaa94ivgWFemJu1ICEaBVpsUqktC9h0cDMOefBmP6Eggb4hxQsvvwm_vRH2PqQ-hgu8Nvhqhx0fPjQHo_lpDa4W6U9A9FArhWjXNG4oXABwKWxeJBMuPeEDCGktJpXf3QSuFcGCTm-cWQ9_lkSvddB1ab015NbG-sWVNmXt_mS729AvzTh1Byq6r1FtdalEdZllSJP0jyj4DGWnrFLcFrGsj0s1cP7VhBxEH5wKFXFcf_hnYsWh7ucFM9NA2YtqXa1mq1t129qWkKztEfXmTRMSDEIowb8AHdGkNvKj9RenfIzJAjX6eHI569gIqDmzHUGRRMu4v6gw3M-SBj7SdzGDZoQ6tEJfioRzaCRMNoMrxHysRlZWSJp7r1YmDwfZ47FLhLmOVCd6V0R8ptp1kznGmak6pXvQukarodrEddgzfSObg1t8jp3kvOxF3ayQ9FBEbzUx31j2pDlZO5FcgsVnhp-IVjyj8CVrfJSfQ_iyHbROeBRnQ6OhAIlEhv1R8dD34tA_gwW7Yz6yjvI=w2006-h1504-no" alt=""></p></li></ul><p>当然，Google Photos最厉害的还是照片管理功能，它可以提供时间线管理，自动按拍照地点进行分类，进行人脸识别，你可以直接搜索某个地点、某个人、甚至是某个东西，比如搜索“汽车”，必会得到所有含有汽车的图片。虽然这些功能其他产品也有，比如Apple家的Photos，但是谷歌这次真的是非常有诚意的整合了如此多的功能，而且还免费，是非常值得试用的一款产品。</p><p>当然，本地备份还是一直要有的。</p>]]></content>
-    
-    <summary type="html">
-    
-      免费照片备份
-    
-    </summary>
-    
-      <category term="工具" scheme="https://mengfeimu.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="Google" scheme="https://mengfeimu.github.io/tags/Google/"/>
     
   </entry>
   
